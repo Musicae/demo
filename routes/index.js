@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 /* GET interpretation page. */
-router.get('/goldberg-variations-bmw-998/glenn-gloud-1981', function(req, res, next) {
+router.get('/js-bach/goldberg-variations-bmw-998/glenn-gloud-1981', function(req, res, next) {
   res.render('demo-gould-1981', { title: 'Musicae - J.S. Bach - Goldberg Variations, BMW 998 - Glenn Gould, 1981' });
 });
 

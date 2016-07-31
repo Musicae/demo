@@ -1,6 +1,15 @@
 extends ./layout.jade
 
+block stylesheets
+  link(rel='stylesheet', href='/stylesheets/style.css')
+  link(rel='stylesheet', href='/stylesheets/interpretation.css')
+
 block content
-  div.container-fluid
-    h2 Glenn Gould, 1981
-      small  - Goldberg Variations, BMW 998 - J.S. Bach
+  div#background-div(style="background: linear-gradient(to bottom right, #15186C, black);")
+      div.col-sm-9#main-image-div(style="background-image: url('/images/glenn-gould-1981.jpg')")
+        br
+        h2#image-title Glenn Gould, 1981
+          small  - Goldberg Variations, BMW 998 - J.S. Bach
+      div.col-sm-3#spotify-div
+        iframe(src="https://embed.spotify.com/?uri=spotify:trackset:Glenn:5bu9A6uphPWg39RC3ZKeku,14V6VqJXHZ08pM6Fu3vUsO,2mXVCqoNE6otHBcmRz4IHv,5SJFZnECoKeTLy7PPVLLbF,14lyZKpPu1ECQpfXhgrip6,325xUomC1NKDerrKIn0zfD,0L5cUf2OgB2GeVzxwGJv3q,4w3aG0qWqCQKhvsQYzX3nY,3HoLpLgT5M6U5TaWqFKgqi,3DRZuYDArzcoTniRTkaax4,7Aw2j9reBy7YeXiqBHvjhE,73NwMH0ND2cUkLe0kn9Ljz,7gAYYUV8mC5Vfsp825sqiS,2CI5exhYgmUhVMR8Mrunk4,4PqCIpr1uWNxakSW79FDaZ,7cKXSyVa3TXEksYArDQRpW,3Kx6ONEfaAGQ4FnzIlTd0O,3c7s2PsmdNUqGaOd3zHDxb,2kjMTSO59RHUp76E4QnGMW,6b1w0rV1rQ7o22QytG4MD4,54VrtN6vHC3gXyqhDulUcW,6AAsNisZwKxgJUmMHOAYAO,0COIj47ajICK5W2See8XSr,3uKsFbdcE8I44qGuE0Hwas,3ibPePT3mJfjgcjwg2lSuG,3WtLQJEmFO5QojdOsuEOGs,7w1t3fHbDG3XCehlTST8mC,55Vz4uotMyR5nIzgeqSroD,0rtuph9t0tzEHZh8n5UlZ8,2cUR4W0mDmx1vOxPjO6ijc,1Ef6KfsIBJpZe2OwvHHrpe,172J2JqVRzR74ILc2eBvta" width="300" height="380" frameborder="0" allowtransparency="true")
+
