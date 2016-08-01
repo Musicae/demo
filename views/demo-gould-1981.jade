@@ -3,10 +3,8 @@ extends ./layout.jade
 block stylesheets
   link(rel='stylesheet', href='/stylesheets/style.css')
   link(rel='stylesheet', href='/stylesheets/interpretation.css')
-  // link(rel='stylesheet', href='/slick/slick.css')
-  // link(rel='stylesheet', href='/slick/slick-theme.css')
-  link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css")
-  link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css")
+  link(rel='stylesheet', href='/slick/slick.css')
+  link(rel='stylesheet', href='/slick/slick-theme.css')
 
 block content
   div.col-sm-9#main-image-div(style="background-image: url('/images/glenn-gould-1981.jpg')")
@@ -55,6 +53,5 @@ block content
         img(src=('/images/glenn-gould-1981.jpg') height='auto' width='300px')
 
 block scripts
-  // script(src='/slick/slick.min.js')
-  script(type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js")
+  script(src='/slick/slick.min.js')
   script(type="text/javascript" src='/javascripts/interpretation.js')
