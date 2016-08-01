@@ -3,7 +3,7 @@ body {
   color: rgb(15,15,15);
 }
 
-a {
+a, a:focus {
   color: rgb(15,15,15);
   text-decoration: underline;
 }
