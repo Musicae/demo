@@ -31,4 +31,14 @@
 
 #spotify-div iframe {
   max-width: 100%;
+  min-height: 100%;
+}
+
+.info-box-container {
+  padding: 15px;
+}
+
+.info-box-content {
+  background-color: rgba(255,255,255,0.8);
+  padding: 15px;
 }
