@@ -17,8 +17,15 @@ a:hover {
   padding: 0;
 }
 
+.navbar-collapse ul {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .navbar {
   background-color: white;
+  border: none;
+  border-bottom: 1px solid #980008;
   border-radius: 0;
   margin: 0;
 }
@@ -46,7 +53,11 @@ nav .form-control {
   border-radius: 0;
   background-color: rgb(245, 245, 245);
   border: none;
-  color: white;
+}
+
+nav input:focus {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .navbar-form {
@@ -101,7 +112,7 @@ nav .form-control {
   }
 }
 
-@media (min-width: 860px) {
+@media (min-width: 920px) {
   ul.nav li.dropdown:hover > ul.dropdown-menu {
     display: block;
   }

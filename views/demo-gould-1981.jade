@@ -7,36 +7,58 @@ block stylesheets
   link(rel='stylesheet', href='/slick/slick-theme.css')
 
 block content
-  div.col-sm-9#main-image-div(style="background-image: url('/images/glenn-gould-1981.jpg')")
+  div.col-sm-12#main-image-div(style="background-image: url('/images/glenn-gould-1981.jpg')")
     br
     h1#image-title Glenn Gould, 1981
       small  - Goldberg Variations, BMW 998 - J.S. Bach
-  div.col-sm-3#spotify-div
-    iframe(src="https://embed.spotify.com/?uri=spotify:trackset:Glenn:5bu9A6uphPWg39RC3ZKeku,14V6VqJXHZ08pM6Fu3vUsO,2mXVCqoNE6otHBcmRz4IHv,5SJFZnECoKeTLy7PPVLLbF,14lyZKpPu1ECQpfXhgrip6,325xUomC1NKDerrKIn0zfD,0L5cUf2OgB2GeVzxwGJv3q,4w3aG0qWqCQKhvsQYzX3nY,3HoLpLgT5M6U5TaWqFKgqi,3DRZuYDArzcoTniRTkaax4,7Aw2j9reBy7YeXiqBHvjhE,73NwMH0ND2cUkLe0kn9Ljz,7gAYYUV8mC5Vfsp825sqiS,2CI5exhYgmUhVMR8Mrunk4,4PqCIpr1uWNxakSW79FDaZ,7cKXSyVa3TXEksYArDQRpW,3Kx6ONEfaAGQ4FnzIlTd0O,3c7s2PsmdNUqGaOd3zHDxb,2kjMTSO59RHUp76E4QnGMW,6b1w0rV1rQ7o22QytG4MD4,54VrtN6vHC3gXyqhDulUcW,6AAsNisZwKxgJUmMHOAYAO,0COIj47ajICK5W2See8XSr,3uKsFbdcE8I44qGuE0Hwas,3ibPePT3mJfjgcjwg2lSuG,3WtLQJEmFO5QojdOsuEOGs,7w1t3fHbDG3XCehlTST8mC,55Vz4uotMyR5nIzgeqSroD,0rtuph9t0tzEHZh8n5UlZ8,2cUR4W0mDmx1vOxPjO6ijc,1Ef6KfsIBJpZe2OwvHHrpe,172J2JqVRzR74ILc2eBvta" width="300" height="380" frameborder="0" allowtransparency="true")
-  div.col-xs-12
-    br
+  div#player-div
+    div#hover-part
+      p#listen-text Listen
+    div#player-part
+      // - var playerProvider = "spotify"
+      if playerProvider == "spotify"
+        iframe(src="https://embed.spotify.com/?uri=spotify:trackset:Glenn:5bu9A6uphPWg39RC3ZKeku,14V6VqJXHZ08pM6Fu3vUsO,2mXVCqoNE6otHBcmRz4IHv,5SJFZnECoKeTLy7PPVLLbF,14lyZKpPu1ECQpfXhgrip6,325xUomC1NKDerrKIn0zfD,0L5cUf2OgB2GeVzxwGJv3q,4w3aG0qWqCQKhvsQYzX3nY,3HoLpLgT5M6U5TaWqFKgqi,3DRZuYDArzcoTniRTkaax4,7Aw2j9reBy7YeXiqBHvjhE,73NwMH0ND2cUkLe0kn9Ljz,7gAYYUV8mC5Vfsp825sqiS,2CI5exhYgmUhVMR8Mrunk4,4PqCIpr1uWNxakSW79FDaZ,7cKXSyVa3TXEksYArDQRpW,3Kx6ONEfaAGQ4FnzIlTd0O,3c7s2PsmdNUqGaOd3zHDxb,2kjMTSO59RHUp76E4QnGMW,6b1w0rV1rQ7o22QytG4MD4,54VrtN6vHC3gXyqhDulUcW,6AAsNisZwKxgJUmMHOAYAO,0COIj47ajICK5W2See8XSr,3uKsFbdcE8I44qGuE0Hwas,3ibPePT3mJfjgcjwg2lSuG,3WtLQJEmFO5QojdOsuEOGs,7w1t3fHbDG3XCehlTST8mC,55Vz4uotMyR5nIzgeqSroD,0rtuph9t0tzEHZh8n5UlZ8,2cUR4W0mDmx1vOxPjO6ijc,1Ef6KfsIBJpZe2OwvHHrpe,172J2JqVRzR74ILc2eBvta" width="300" height="380" frameborder="0" allowtransparency="true")
+      else if playerProvider == "applemusic"
+        iframe(src="//tools.applemusic.com/embed/v1/album/1016523593?country=us" height="380px" width="100%" frameborder="0")
+      else
+        div#player-choice-div
+          br
+          p Please select a service:
+          br
+          br
+          p: a.player-choice(href="#" data-player="spotify")
+            img(src="/images/Spotify_Logo.png" alt="Spotify")
+          br
+          br
+          p: a.player-choice(href="#" data-player="applemusic")
+            img(src="/images/Apple_Music_Badge.svg" alt="Apple Music")
+
+  div.col-sm-9
     div.col-sm-4.info-box-container
       div.info-box-content
         h2 Glenn Gould
         p: strong (1932-1982)
         p Canadian Pianist
         p: a.more-link(href="#") Read more
-        p.more-text Glenn Herbert Gould was a Canadian pianist who became one of the best-known and most celebrated classical pianists of the 20th century. He was particularly renowned as an interpreter of the keyboard music of Johann Sebastian Bach. His playing was distinguished by remarkable technical proficiency and capacity to articulate the polyphonic texture of Bach's music. 
+        p.more-text Glenn Herbert Gould was a Canadian pianist who became one of the best-known and most celebrated classical pianists of the 20th century. He was particularly renowned as an interpreter of the keyboard music of Johann Sebastian Bach. His playing was distinguished by remarkable technical proficiency and capacity to articulate the polyphonic texture of Bach's music.
     div.col-sm-4.info-box-container
       div.info-box-content
         h2 Goldberg Variations, BMW 998
         p: strong Published: 1741
-        a.more-link(href="#") Read more
-        p.more-text The Goldberg Variations, BWV 988, is a work written for harpsichord by Johann Sebastian Bach, consisting of an aria and a set of 30 variations. First published in 1741, the work is considered to be one of the most important examples of variation form. The Variations are named after Johann Gottlieb Goldberg, who may have been the first performer. 
+        p: a.more-link(href="#") Read more
+        p.more-text The Goldberg Variations, BWV 988, is a work written for harpsichord by Johann Sebastian Bach, consisting of an aria and a set of 30 variations. First published in 1741, the work is considered to be one of the most important examples of variation form. The Variations are named after Johann Gottlieb Goldberg, who may have been the first performer.
     div.col-sm-4.info-box-container
       div.info-box-content
         h2 Johann Sebastian Bach
         p: strong (1685-1750)
         p German Composer
-        a.more-link(href="#") Read more
-        p.more-text Johann Sebastian Bach was a German composer and musician of the Baroque period. He enriched established German styles through his skill in counterpoint, harmonic and motivic organisation, and the adaptation of rhythms, forms, and textures from abroad, particularly from Italy and France. His music is revered for its technical command, artistic beauty, and intellectual depth. 
+        p: a.more-link(href="#") Read more
+        p.more-text Johann Sebastian Bach was a German composer and musician of the Baroque period. He enriched established German styles through his skill in counterpoint, harmonic and motivic organisation, and the adaptation of rhythms, forms, and textures from abroad, particularly from Italy and France. His music is revered for its technical command, artistic beauty, and intellectual depth.
+  div.col-sm-3#external-links-container
+    p Concerts
+
   div.slider-container-div.col-xs-12
-    div.single-item
+    div.slider-div
       div
         img(src=('/images/glenn-gould-1981.jpg') height='auto' width='300px')
       div

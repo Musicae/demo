@@ -10,6 +10,7 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  border-bottom: 1px solid #980008;
 }
 
 #image-title {
@@ -19,23 +20,65 @@
   left: 10px;
 }
 
-#spotify-div {
-  background-color: rgb(20, 20, 20);
+#player-div {
+  position: absolute;
+  top: 51px;
+  right: 0px;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 340px;
+  height: 379px;
+  margin-right: 0;
 }
 
-#spotify-div iframe {
+#hover-part {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 380px;
+  width: 40px;
+  line-height: 380px;
+  vertical-align: middle;
+}
+
+#player-part {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+}
+
+#player-part iframe {
   max-width: 100%;
   min-height: 100%;
 }
 
+#player-choice-div {
+  width: 100%;
+  text-align: center;
+  padding: 30px;
+}
+
+.player-choice img {
+  width: 130px;
+  height: auto;
+}
+
+#listen-text {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
 .info-box-container {
-  padding: 10px 15px 15px 15px;
+  padding: 30px 15px 30px 15px;
 }
 
 .info-box-content {
-  background-color: rgba(255,255,255,0.8);
+  background-color: rgba(0,0,0,0.1);
   padding: 20px 25px 30px 25px;
-  height: 310px;
+  min-height: 270px;
   text-align: center;
 }
 
@@ -44,8 +87,16 @@
   text-align: left;
 }
 
+#external-links-container {
+  padding: 30px;
+}
+
 .slider-container-div {
   text-align: center;
   padding: 50px;
-  background-color: gray;
+  background-color: rgba(0,0,0,0.1);
+}
+
+.slider-div div img {
+  margin: auto;
 }
