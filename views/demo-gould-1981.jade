@@ -2,25 +2,22 @@ extends ./layout.jade
 
 block stylesheets
   link(rel='stylesheet', href='/stylesheets/style.css')
-  link(rel='stylesheet', href='/stylesheets/interpretation.css')
   link(rel='stylesheet', href='/slick/slick.css')
   link(rel='stylesheet', href='/slick/slick-theme.css')
+  link(rel='stylesheet', href='/stylesheets/interpretation.css')
 
 block content
-  div.col-sm-12#main-image-div(style="background-image: url('/images/glenn-gould-1981.jpg')")
+  div.col-xs-12#main-image-div(style="background-image: url('/images/glenn-gould-1981.jpg')")
     br
     h1#image-title Glenn Gould, 1981
-      small  - Goldberg Variations, BMW 998 - J.S. Bach
-  div#player-div
-    div#hover-part
-      p#listen-text Listen
-    div#player-part
-      // - var playerProvider = "spotify"
-      if playerProvider == "spotify"
-        iframe(src="https://embed.spotify.com/?uri=spotify:trackset:Glenn:5bu9A6uphPWg39RC3ZKeku,14V6VqJXHZ08pM6Fu3vUsO,2mXVCqoNE6otHBcmRz4IHv,5SJFZnECoKeTLy7PPVLLbF,14lyZKpPu1ECQpfXhgrip6,325xUomC1NKDerrKIn0zfD,0L5cUf2OgB2GeVzxwGJv3q,4w3aG0qWqCQKhvsQYzX3nY,3HoLpLgT5M6U5TaWqFKgqi,3DRZuYDArzcoTniRTkaax4,7Aw2j9reBy7YeXiqBHvjhE,73NwMH0ND2cUkLe0kn9Ljz,7gAYYUV8mC5Vfsp825sqiS,2CI5exhYgmUhVMR8Mrunk4,4PqCIpr1uWNxakSW79FDaZ,7cKXSyVa3TXEksYArDQRpW,3Kx6ONEfaAGQ4FnzIlTd0O,3c7s2PsmdNUqGaOd3zHDxb,2kjMTSO59RHUp76E4QnGMW,6b1w0rV1rQ7o22QytG4MD4,54VrtN6vHC3gXyqhDulUcW,6AAsNisZwKxgJUmMHOAYAO,0COIj47ajICK5W2See8XSr,3uKsFbdcE8I44qGuE0Hwas,3ibPePT3mJfjgcjwg2lSuG,3WtLQJEmFO5QojdOsuEOGs,7w1t3fHbDG3XCehlTST8mC,55Vz4uotMyR5nIzgeqSroD,0rtuph9t0tzEHZh8n5UlZ8,2cUR4W0mDmx1vOxPjO6ijc,1Ef6KfsIBJpZe2OwvHHrpe,172J2JqVRzR74ILc2eBvta" width="300" height="380" frameborder="0" allowtransparency="true")
-      else if playerProvider == "applemusic"
-        iframe(src="//tools.applemusic.com/embed/v1/album/1016523593?country=us" height="380px" width="100%" frameborder="0")
-      else
+      small  < 
+        a(href="#") Goldberg Variations, BMW 998
+        |  < 
+        a(href="#") Johann Sebastian Bach
+    div#player-div
+      div#hover-part
+        p#listen-text Listen
+      div#player-part
         div#player-choice-div
           br
           p Please select a service:
@@ -32,10 +29,14 @@ block content
           br
           p: a.player-choice(href="#" data-player="applemusic")
             img(src="/images/Apple_Music_Badge.svg" alt="Apple Music")
+          br
+          p: a.player-choice(href="#" data-player="deezer")
+            img(src="/images/Deezer_Logo.png" alt="Deezer")
 
-  div.col-sm-9
+  div.col-xs-12.col-sm-9
     div.col-sm-4.info-box-container
       div.info-box-content
+        img(src="/images/mike.png")
         h2 Glenn Gould
         p: strong (1932-1982)
         p Canadian Pianist
@@ -43,36 +44,57 @@ block content
         p.more-text Glenn Herbert Gould was a Canadian pianist who became one of the best-known and most celebrated classical pianists of the 20th century. He was particularly renowned as an interpreter of the keyboard music of Johann Sebastian Bach. His playing was distinguished by remarkable technical proficiency and capacity to articulate the polyphonic texture of Bach's music.
     div.col-sm-4.info-box-container
       div.info-box-content
+        img(src="/images/quaver.png")
         h2 Goldberg Variations, BMW 998
         p: strong Published: 1741
         p: a.more-link(href="#") Read more
         p.more-text The Goldberg Variations, BWV 988, is a work written for harpsichord by Johann Sebastian Bach, consisting of an aria and a set of 30 variations. First published in 1741, the work is considered to be one of the most important examples of variation form. The Variations are named after Johann Gottlieb Goldberg, who may have been the first performer.
     div.col-sm-4.info-box-container
       div.info-box-content
+        img(src="/images/key.png")
         h2 Johann Sebastian Bach
         p: strong (1685-1750)
         p German Composer
         p: a.more-link(href="#") Read more
         p.more-text Johann Sebastian Bach was a German composer and musician of the Baroque period. He enriched established German styles through his skill in counterpoint, harmonic and motivic organisation, and the adaptation of rhythms, forms, and textures from abroad, particularly from Italy and France. His music is revered for its technical command, artistic beauty, and intellectual depth.
-  div.col-sm-3#external-links-container
-    p Concerts
+  div.col-xs-12.col-sm-3#external-links-container
+    p Upcoming concerts in Paris:
+    ul#concert-list
+      li: a(href="#") November 23rd, 2015: 
+        br
+        strong Alexandre Tharaud
+        br
+        |  at Philharmonie de Paris
+      li: a(href="#") July 2nd, 2016: 
+        br
+        strong Alexandre Tharaud
+        br
+        |  at Château de Versailles
+      a(href="#") See more...
+    br
+    p Purchase CD:
+    a(href="http://www.arkivmusic.com/classical/album.jsp?album_id=349)") $11.99 on ArkivMusic
 
   div.slider-container-div.col-xs-12
+    h2 Discover other interpretations
+    br
     div.slider-div
       div
-        img(src=('/images/glenn-gould-1981.jpg') height='auto' width='300px')
+        div.slider-content-div(style="background-image: url('/images/glenn-gould-1955.jpg')")
       div
-        img(src=('/images/glenn-gould-1981.jpg') height='auto' width='300px')
+        div.slider-content-div(style="background-image: url('/images/alexandre-tharaud.jpg')")
       div
-        img(src=('/images/glenn-gould-1981.jpg') height='auto' width='300px')
+        div.slider-content-div(style="background-image: url('/images/murray-perahia.jpg')")
       div
-        img(src=('/images/glenn-gould-1981.jpg') height='auto' width='300px')
+        div.slider-content-div(style="background-image: url('/images/wanda-landowska.jpg')")
       div
-        img(src=('/images/glenn-gould-1981.jpg') height='auto' width='300px')
-      div
-        img(src=('/images/glenn-gould-1981.jpg') height='auto' width='300px')
-      div
-        img(src=('/images/glenn-gould-1981.jpg') height='auto' width='300px')
+        div.slider-content-div(style="background-image: url('/images/andreas-staier.jpg')")
+
+  div.col-xs-12
+    h2 More by Glenn Gould
+
+  div.col-xs-12
+    h2 More by Johann Sebastian Bach
 
 block scripts
   script(src='/slick/slick.min.js')

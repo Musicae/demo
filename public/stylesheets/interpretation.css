@@ -1,3 +1,12 @@
+h1 > small > a {
+  color: #777;
+  text-decoration: none;
+}
+
+h1 > small > a:hover {
+  text-decoration: none;
+}
+
 #main-image-div, #spotify-div {
   margin: 0;
   padding: 0;
@@ -11,6 +20,7 @@
   background-position: center;
   background-attachment: fixed;
   border-bottom: 1px solid #980008;
+  overflow: hidden;
 }
 
 #image-title {
@@ -20,10 +30,11 @@
   left: 10px;
 }
 
+/* PLAYER */
 #player-div {
   position: absolute;
-  top: 51px;
-  right: 0px;
+  top: 0;
+  right: 0;
   background-color: rgba(255, 255, 255, 0.7);
   width: 340px;
   height: 379px;
@@ -71,6 +82,7 @@
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 
+/* INFO AND LINKS PART */
 .info-box-container {
   padding: 30px 15px 30px 15px;
 }
@@ -78,7 +90,7 @@
 .info-box-content {
   background-color: rgba(0,0,0,0.1);
   padding: 20px 25px 30px 25px;
-  min-height: 270px;
+  min-height: 310px;
   text-align: center;
 }
 
@@ -88,15 +100,61 @@
 }
 
 #external-links-container {
-  padding: 30px;
+  padding: 40px 30px 30px 30px;
+  min-height: 370px;
+  border-left: 1px solid #980008;
 }
 
+#concert-list li {
+  margin-bottom: 15px;
+}
+
+#concert-list li a {
+  text-decoration: none;
+}
+
+/* INTERPRETATIONS SLIDER PART */
 .slider-container-div {
   text-align: center;
-  padding: 50px;
+  padding: 20px;
   background-color: rgba(0,0,0,0.1);
 }
 
-.slider-div div img {
+.slider-div {
+  margin: 20px;
+  width: 90%;
   margin: auto;
+}
+
+.slider-content-div {
+  max-width: 350px;
+  height: 200px;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: #980008;
+  opacity: 1;
+  font-size: 40px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.slick-prev, .slick-next {
+  /* margin-top: -16px; */
+  height: 40px;
+}
+
+.slick-prev:before {
+  content: "<";
+}
+
+.slick-next:before {
+  content: ">";
+}
+
+.slick-dots li button::before, .slick-dots li.slick-active button:before {
+  color: #980008;
 }

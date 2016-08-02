@@ -9,7 +9,7 @@ a, a:focus {
 }
 
 a:hover {
-  color: #87000B;
+  color: #980008;
   text-decoration: underline;
 }
 
@@ -126,3 +126,6 @@ h1 {
   color: white;
 }
 
+h2 {
+  font-size: 25px;
+}
