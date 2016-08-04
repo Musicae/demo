@@ -51,7 +51,7 @@ h1 > small > a:hover {
   width: 60px;
   line-height: 380px;
   vertical-align: middle;
-  background-color: rgba(255,68,66,0.4);
+  background-color: rgba(235, 45, 53,0.6);
 }
 
 #player-div, #hover-part {
