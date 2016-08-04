@@ -67,4 +67,13 @@ $(document).ready(function(){
     }, 500);
   });
 
+
+  var blurVar;
+
+  $(window).scroll(function(event) {
+    blurVar = "blur(" + $(window).scrollTop() / 10 + "px)";
+    $('#main-image-div').css("webkitFilter", blurVar);
+    $('#main-image-div').css("filter", blurVar);
+  });
+
 });
