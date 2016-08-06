@@ -23,6 +23,19 @@
   background-size: cover;
   position: relative;
   overflow: hidden;
+  text-align: center;
+  line-height: 300px;
+}
+
+.perfomer-img-div > i {
+  font-size: 60px;
+  margin: auto;
+  color: rgba(255,255,255,0.6);
+  vertical-align: middle;
+}
+
+#play-black {
+  color: black;
 }
 
 .player-iframe {
