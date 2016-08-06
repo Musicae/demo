@@ -1,0 +1,33 @@
+#container-page {
+  padding-top: 100px;
+}
+
+#title {
+  padding-left: 15px;
+  margin-top: 70px;
+}
+
+#container-versions {
+  margin-top: 50px;
+  background-color: #ECEAE9;
+  border-radius: 2px;
+}
+
+.info-box-content {
+  margin: 20px 0px 20px 0px;
+}
+
+.perfomer-img-div {
+  height: 200px;
+  margin: auto;
+  background-position: center;
+  background-size: cover;
+}
+
+.comment-div {
+  padding-top: 10px;
+}
+
+h1 {
+  color: black;
+}

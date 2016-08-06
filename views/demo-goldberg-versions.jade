@@ -1,0 +1,71 @@
+extends ./layout.jade
+
+block stylesheets
+  link(rel='stylesheet', href='/stylesheets/style.css')
+  link(rel='stylesheet', href='/stylesheets/goldberg-versions.css')
+
+block content
+  div#container-page
+    div.hidden-xs.col-sm-2
+      p list
+    div.col-sm-10
+      div#title
+        h1: strong The Goldberg Variations, BWV 988
+        h2 Composer: Johann Sebastian Bach, 1741
+        p The Goldberg Variations is a work written for harpsichord consisting of an aria and a set of 30 variations.
+
+      //- REFERENCE VERSIONS
+      div.container-fluid#container-versions
+        h4 Reference Versions
+        div.row
+          div.col-xs-12.col-sm-6.col-lg-4
+            div.info-box-content
+              div.perfomer-img-div(style='background-image:url("/images/glenn-gould-1981.jpg")')
+              div.comment-div
+                p: strong Glenn Gould, 1981
+          div.col-xs-12.col-sm-6.col-lg-4
+            div.info-box-content
+              div.perfomer-img-div(style='background-image:url("/images/murray-perahia.jpg")')
+              div.comment-div
+                p: strong Murray Perahia, 2000
+          div.col-xs-12.col-sm-6.col-lg-4
+            div.info-box-content
+              div.perfomer-img-div(style='background-image:url("/images/glenn-gould-1955.jpg")')
+              div.comment-div
+                p: strong Glenn Gould, 1955
+
+      //- RECENT VERSIONS
+      div.container-fluid#container-versions
+        h4 New Versions
+        div.row
+          div.col-xs-12.col-sm-6.col-lg-4
+            div.info-box-content
+              div.perfomer-img-div(style='background-image:url("/images/alexandre-tharaud.jpg")')
+              div.comment-div
+                p: strong Alexandre Tharaud, 2015
+
+
+      //- HARPSISCHORD VERSIONS
+      div.container-fluid#container-versions
+        h4 Harpsichord Versions
+        div.row
+          div.col-xs-12.col-sm-6.col-lg-4
+            div.info-box-content
+              div.perfomer-img-div(style='background-image:url("/images/glenn-gould-1981.jpg")')
+              div.comment-div
+                p: strong Glenn Gould, 1981
+
+
+      //- OTHER VERSIONS
+      div.container-fluid#container-versions
+        h4 Others
+        div.row
+          div.col-xs-12.col-sm-6.col-lg-4
+            div.info-box-content
+              div.perfomer-img-div(style='background-image:url("/images/glenn-gould-1981.jpg")')
+              div.comment-div
+                p: strong Glenn Gould, 1981
+
+
+
+
