@@ -21,14 +21,79 @@ html
         ul.nav.navbar-nav
           li.dropdown
             a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Composers
-            ul.dropdown-menu
-              li: a(href="#") Action
-              li: a(href="#") Another action
-              li: a(href="#") Something else here
-              li.divider(role="separator")
-              li: a(href="#") Separated link
-              li.divider(role="separator")
-              li: a(href="#") One more separated link
+            ul.dropdown-menu.multi-column.columns-3
+              div.row
+                div.col-sm-4.multi-column-dropdown
+                  ul
+                    li: a(href="#"): strong View All Composers
+                    li: a(href="#"): strong Featured:
+                    li: a(href="#") Bach, Johann Sebastian
+                    li: a(href="#") Beethoven, Ludwig van
+                    li: a(href="#") Berlioz, Hector
+                    li: a(href="#") Bizet, Georges
+                    li: a(href="#") Brahms, Johannes
+                    li: a(href="#") Chopin, Frédéric
+                    li: a(href="#") Debussy, Claude
+                    li: a(href="#") Dvorák, Antonín
+                    li: a(href="#") Fauré, Gabriel
+                div.col-sm-4.multi-column-dropdown
+                  ul
+                    li: a &nbsp;
+                    li: a &nbsp;
+                    li: a(href="#") Handel, George Frideric
+                    li: a(href="#") Haydn, Franz Joseph
+                    li: a(href="#") Liszt, Franz
+                    li: a(href="#") Mahler, Gustav
+                    li: a(href="#") Mendelssohn, Felix
+                    li: a(href="#") Mozart, Wolfgang Amadeus
+                    li: a(href="#") Prokofiev, Sergei
+                    li: a(href="#") Rachmaninov, Sergei
+                    li: a(href="#") Ravel, Maurice
+                div.col-sm-4.multi-column-dropdown
+                  ul
+                    li: input.form-control.column-search(type=text placeholder="Search")
+                    li: a &nbsp;
+                    li: a(href="#") Rossini, Gioachino
+                    li: a(href="#") Schubert, Franz
+                    li: a(href="#") Schumann, Robert
+                    li: a(href="#") Shostakovich, Dmitri
+                    li: a(href="#") Strauss, Richard
+                    li: a(href="#") Stravinsky, Igor
+                    li: a(href="#") Tchaikovsky, Peter Ilyich
+                    li: a(href="#") Vivaldi, Antonio
+                    li: a(href="#") Wagner, Richard
+          li.dropdown
+            a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Conductors
+            ul.dropdown-menu.multi-column.columns-3
+              div.row
+                div.col-sm-4.multi-column-dropdown
+                  ul
+                    li: a(href="#") Action
+                    li: a(href="#") Another action
+                    li: a(href="#") Something else here
+                    li.divider(role="separator")
+                    li: a(href="#") Separated link
+                    li.divider(role="separator")
+                    li: a(href="#") One more separated link
+                div.col-sm-4.multi-column-dropdown
+                  ul
+                    li: a(href="#") Action
+                    li: a(href="#") Another action
+                    li: a(href="#") Something else here
+                    li.divider(role="separator")
+                    li: a(href="#") Separated link
+                    li.divider(role="separator")
+                    li: a(href="#") One more separated link
+                div.col-sm-4.multi-column-dropdown
+                  ul
+                    li: a(href="#") Action
+                    li: a(href="#") Another action
+                    li: a(href="#") Something else here
+                    li.divider(role="separator")
+                    li: a(href="#") Separated link
+                    li.divider(role="separator")
+                    li: a(href="#") One more separated link
+
           li.dropdown
             a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Perfomers
             ul.dropdown-menu
@@ -39,6 +104,49 @@ html
               li: a(href="#") Separated link
               li.divider(role="separator")
               li: a(href="#") One more separated link
+          li.dropdown
+            a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Ensembles
+            ul.dropdown-menu.multi-column.columns-3
+              div.row
+                div.col-sm-4.multi-column-dropdown
+                  ul
+                    li: a(href="#"): strong View All Composers
+                    li: a(href="#"): strong Featured:
+                    li: a(href="#") Bach, Johann Sebastian
+                    li: a(href="#") Beethoven, Ludwig van
+                    li: a(href="#") Berlioz, Hector
+                    li: a(href="#") Bizet, Georges
+                    li: a(href="#") Brahms, Johannes
+                    li: a(href="#") Chopin, Frédéric
+                    li: a(href="#") Debussy, Claude
+                    li: a(href="#") Dvorák, Antonín
+                    li: a(href="#") Fauré, Gabriel
+                div.col-sm-4.multi-column-dropdown
+                  ul
+                    li: a &nbsp;
+                    li: a &nbsp;
+                    li: a(href="#") Handel, George Frideric
+                    li: a(href="#") Haydn, Franz Joseph
+                    li: a(href="#") Liszt, Franz
+                    li: a(href="#") Mahler, Gustav
+                    li: a(href="#") Mendelssohn, Felix
+                    li: a(href="#") Mozart, Wolfgang Amadeus
+                    li: a(href="#") Prokofiev, Sergei
+                    li: a(href="#") Rachmaninov, Sergei
+                    li: a(href="#") Ravel, Maurice
+                div.col-sm-4.multi-column-dropdown
+                  ul
+                    li: input.form-control.column-search(type=text placeholder="Search")
+                    li: a &nbsp;
+                    li: a(href="#") Rossini, Gioachino
+                    li: a(href="#") Schubert, Franz
+                    li: a(href="#") Schumann, Robert
+                    li: a(href="#") Shostakovich, Dmitri
+                    li: a(href="#") Strauss, Richard
+                    li: a(href="#") Stravinsky, Igor
+                    li: a(href="#") Tchaikovsky, Peter Ilyich
+                    li: a(href="#") Vivaldi, Antonio
+                    li: a(href="#") Wagner, Richard
           li.dropdown
             a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Genres
             ul.dropdown-menu
@@ -52,9 +160,13 @@ html
         div.navbar-right#sign-in-div
           ul.nav.navbar-nav
             li: a(href="#") Sign in / Register
-        form.navbar-form.navbar-right
-          div.form-group
-            input.form-control(type="text" placeholder="Search")
+        div.navbar-right
+          ul.nav.navbar-nav(style="padding-right: 0;")
+            li: a(href="#")
+              span.glyphicon.glyphicon-search(aria-hidden="true")
+        // form.navbar-form.navbar-right
+        //   div.form-group
+        //     input.form-control(type="text" placeholder="Search")
     block content
     script(src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous")
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")

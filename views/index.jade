@@ -4,3 +4,16 @@ block content
   div.container
     h1 Welcome to Musicae
     a(href="/js-bach/goldberg-variations-bmw-998/glenn-gloud-1981") First example
+
+  div.container
+    div#image-player(style="width: 400px; height: 300px; overflow: hidden; position: relative;")
+      img(src="/images/glenn-gould-1981.jpg" width="400" height="300")
+      div#player(style="position: absolute; left: 0; bottom: -3px;")
+        iframe(src="https://embed.spotify.com/?uri=spotify:album:1aCpHSQE5ghxibsQ5gkBe0" width="400" height="80" frameborder="0" allowtransparency="true")
+
+
+
+
+block scripts
+  script(type="text/javascript" src='/javascripts/testing.js')
+
