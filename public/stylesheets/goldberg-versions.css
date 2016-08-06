@@ -1,5 +1,4 @@
 #container-page {
-  padding-top: 100px;
 }
 
 #title {
@@ -18,10 +17,18 @@
 }
 
 .perfomer-img-div {
-  height: 200px;
+  height: 300px;
   margin: auto;
   background-position: center;
   background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.player-iframe {
+  position: absolute;
+  top: 300px;
+  width: 100%;
 }
 
 .comment-div {

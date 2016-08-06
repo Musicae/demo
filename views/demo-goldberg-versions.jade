@@ -18,19 +18,28 @@ block content
       div.container-fluid#container-versions
         h4 Reference Versions
         div.row
+          //- Glenn Gould 1981
           div.col-xs-12.col-sm-6.col-lg-4
             div.info-box-content
               div.perfomer-img-div(style='background-image:url("/images/glenn-gould-1981.jpg")')
+                div.player-iframe
+                  iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A1aCpHSQE5ghxibsQ5gkBe0" width="100%" height="380" frameborder="0" allowtransparency="true")
               div.comment-div
                 p: strong Glenn Gould, 1981
+          //- Murray Perahia 2000
           div.col-xs-12.col-sm-6.col-lg-4
             div.info-box-content
               div.perfomer-img-div(style='background-image:url("/images/murray-perahia.jpg")')
+                div.player-iframe
+                  iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A2ecywJZyq9FeZWhKUT0kIq" width="100%" height="380" frameborder="0" allowtransparency="true")
               div.comment-div
                 p: strong Murray Perahia, 2000
+          //- Glenn Gould 1955
           div.col-xs-12.col-sm-6.col-lg-4
             div.info-box-content
               div.perfomer-img-div(style='background-image:url("/images/glenn-gould-1955.jpg")')
+                div.player-iframe
+                  iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A0ogm04LcccovebvmP9Mo6W" width="100%" height="380" frameborder="0" allowtransparency="true")
               div.comment-div
                 p: strong Glenn Gould, 1955
 
@@ -41,6 +50,8 @@ block content
           div.col-xs-12.col-sm-6.col-lg-4
             div.info-box-content
               div.perfomer-img-div(style='background-image:url("/images/alexandre-tharaud.jpg")')
+                div.player-iframe
+                  iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A6pyy2WoFZvmohjwHOzLzkt" width="100%" height="380" frameborder="0" allowtransparency="true")
               div.comment-div
                 p: strong Alexandre Tharaud, 2015
 
@@ -48,6 +59,19 @@ block content
       //- HARPSISCHORD VERSIONS
       div.container-fluid#container-versions
         h4 Harpsichord Versions
+        div.row
+          div.col-xs-12.col-sm-6.col-lg-4
+            div.info-box-content
+              div.perfomer-img-div(style='background-image:url("/images/andreas-staier.jpg")')
+                div.player-iframe
+                  iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A3I7yCh1xt7hDlkT8FnXmNI" width="100%" height="380" frameborder="0" allowtransparency="true")
+              div.comment-div
+                p: strong Andreas Staier, 2015
+
+
+      //- ORGAN VERSIONS
+      div.container-fluid#container-versions
+        h4 Organ Versions
         div.row
           div.col-xs-12.col-sm-6.col-lg-4
             div.info-box-content
@@ -67,5 +91,7 @@ block content
                 p: strong Glenn Gould, 1981
 
 
+block scripts
+  script(type="text/javascript" src='/javascripts/goldberg-versions.js')
 
 
