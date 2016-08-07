@@ -10,15 +10,34 @@ block content
 
   div#wrapper
     div.sidebar
-      a(href="#").nav-toggle-btn
-      ul.sidebar-nav
-        p Reference versions
-        li.sidebar-brand: a(href="#") Glenn Gould
-        li.sidebar-brand: a(href="#") Murray Perahia
-      ul.sidebar-nav
-        p New versions
-        li.sidebar-brand: a(href="#") Glenn Gould
-        li.sidebar-brand: a(href="#") Murray Perahia
+      a(href="#").nav-toggle-btn#menu-icon-layout
+        i.fa.fa-bars(aria-hidden="true")
+      div.sidebarcontent-div
+        ul.sidebar-nav
+          a.versioncategory(href="#referenceversion") Reference versions
+          li.sidebar-brand: a(href="#") Glenn Gould, 1981
+          li.sidebar-brand: a(href="#") Murray Perahia, 2000
+          li.sidebar-brand: a(href="#") Glenn Gould, 1955
+        ul.sidebar-nav
+          a.versioncategory(href="#newversions") New versions
+          li.sidebar-brand: a(href="#") Alexandre Tharaud, 2015
+          li.sidebar-brand: a(href="#") Nicholas Angelich, 2011
+          li.sidebar-brand: a(href="#") Avner Arad, 2011
+          li.sidebar-brand: a(href="#") Andrea Bacchetti, 2006
+          li.sidebar-brand: a(href="#") Tzimon Barto, 2015
+        ul.sidebar-nav
+          a.versioncategory(href="#harpsichordversions") Harpsichord versions
+          li.sidebar-brand: a(href="#") Andreas Staier, 2015
+          li.sidebar-brand: a(href="#") Luc Beauséjour, 2006
+        ul.sidebar-nav
+          a.versioncategory(href="#organversions") Organ versions
+          li.sidebar-brand: a(href="#") Hansjörg Albrecht, 2008
+        ul.sidebar-nav
+          a.versioncategory(href="#stringtrio") String Trio
+          li.sidebar-brand: a(href="#") Goldberg Trio Lucerne, 2011
+        ul.sidebar-nav
+          a.versioncategory(href="#otherversions") Other Versions
+          li.sidebar-brand: a(href="#") Jacques Loussier Trio, 2000
 
     div.page-content-wrapper.page-content-wrapper-margin-left
       //- div.container
@@ -30,7 +49,7 @@ block content
 
       //- div.container
         //- REFERENCE VERSIONS
-      div.box.col-xs-6.col-sm-12
+      div.box.col-xs-6.col-sm-12#referenceversion
         div.title-box
           h4 Reference Versions
         div.content-box
@@ -64,18 +83,8 @@ block content
               div.comment-div
                 p: strong Glenn Gould, 1955
 
-          //- Glenn Gould 1955
-          div.col-xs-12.col-sm-6.col-lg-4
-            div.info-box-content
-              div.perfomer-img-div(style='background-image:url("/images/glenn-gould-1955.jpg")')
-                div.player-iframe
-                  iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A0ogm04LcccovebvmP9Mo6W" width="100%" height="380" frameborder="0" allowtransparency="true")
-                i.fa.fa-play-circle(aria-hidden="true")
-              div.comment-div
-                p: strong Glenn Gould, 1955
-
       //- NEW VERSIONS
-      div.box.col-xs-6.col-sm-12
+      div.box.col-xs-6.col-sm-12#newversions
         div.title-box
           h4 New Versions
         div.content-box
@@ -88,9 +97,46 @@ block content
                 i.fa.fa-play-circle(aria-hidden="true")
               div.comment-div
                 p: strong Alexandre Tharaud, 2015
+          div.content-box
+          //- Nicholas Angelich
+          div.col-xs-12.col-sm-6.col-lg-4
+            div.info-box-content
+              div.perfomer-img-div(style='background-image:url("/images/Nicholas-Angelich.jpg")')
+                div.player-iframe
+                  iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A3zKmTIFDNOwBgHUEj5zbfV" width="100%" height="380" frameborder="0" allowtransparency="true")
+                i.fa.fa-play-circle(aria-hidden="true")
+              div.comment-div
+                p: strong Nicholas Angelich, 2011
+          //- Avner Arad
+          div.col-xs-12.col-sm-6.col-lg-4
+            div.info-box-content
+              div.perfomer-img-div(style='background-image:url("/images/Arad-Avner.jpg")')
+                div.player-iframe
+                  iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A5LPqAhrJeLJJTOusuCGoIL" width="100%" height="380" frameborder="0" allowtransparency="true")
+                i.fa.fa-play-circle(aria-hidden="true")
+              div.comment-div
+                p: strong Avner Arad, 2011
+          //- Andrea Bacchetti
+          div.col-xs-12.col-sm-6.col-lg-4
+            div.info-box-content
+              div.perfomer-img-div(style='background-image:url("/images/Bacchetti-Andrea.jpg")')
+                div.player-iframe
+                  iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A4MRbZKtQP0hoILkG8EazrV" width="100%" height="380" frameborder="0" allowtransparency="true")
+                i.fa.fa-play-circle(aria-hidden="true")
+              div.comment-div
+                p: strong Andrea Bacchetti, 2006
+          //- Tzimon Barto
+          div.col-xs-12.col-sm-6.col-lg-4
+            div.info-box-content
+              div.perfomer-img-div(style='background-image:url("/images/Tzimon-Barto.jpg")')
+                div.player-iframe
+                  iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A5yXrtDqKN3VOFQOpd7maFY" width="100%" height="380" frameborder="0" allowtransparency="true")
+                i.fa.fa-play-circle(aria-hidden="true")
+              div.comment-div
+                p: strong Tzimon Barto, 2015
 
       //- HARPHSICHORD VERSIONS
-      div.box.col-xs-6.col-sm-12
+      div.box.col-xs-6.col-sm-12#harpsichordversions
         div.title-box
           h4 Harpsichord Versions
         div.content-box
@@ -103,36 +149,60 @@ block content
                 i.fa.fa-play-circle(aria-hidden="true")
               div.comment-div
                 p: strong Andreas Staier, 2015
+          //- Luc Beauséjour
+          div.col-xs-12.col-sm-6.col-lg-4
+            div.info-box-content
+              div.perfomer-img-div(style='background-image:url("/images/Luc-Beauséjour.jpg")')
+                div.player-iframe
+                  iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A3t8weMtWRWnjVaa8w5dcDp" width="100%" height="380" frameborder="0" allowtransparency="true")
+                i.fa.fa-play-circle(aria-hidden="true")
+              div.comment-div
+                p: strong Luc Beauséjour, 2006
 
       //- ORGAN VERSIONS
-      div.box.col-xs-6.col-sm-12
+      div.box.col-xs-6.col-sm-12#organversions
         div.title-box
-          h4 Harpsichord Versions
+          h4 Organ Versions
         div.content-box
           //- Andreas Staier
           div.col-xs-12.col-sm-6.col-lg-4
             div.info-box-content
-              div.perfomer-img-div(style='background-image:url("/images/andreas-staier.jpg")')
+              div.perfomer-img-div(style='background-image:url("/images/Hansjörg-Albrecht.jpg")')
                 div.player-iframe
-                  iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A3I7yCh1xt7hDlkT8FnXmNI" width="100%" height="380" frameborder="0" allowtransparency="true")
+                  iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A1rC4ov7GO6ceA63T2DKQOJ" width="100%" height="380" frameborder="0" allowtransparency="true")
                 i.fa.fa-play-circle(aria-hidden="true")
               div.comment-div
-                p: strong Andreas Staier, 2015
+                p: strong Hansjörg Albrecht, 2008
+
+      //- STRING TRIO
+      div.box.col-xs-6.col-sm-12#stringtrio
+        div.title-box
+          h4 String Trio
+        div.content-box
+          //- Goldberg Trio Lucerne
+          div.col-xs-12.col-sm-6.col-lg-4
+            div.info-box-content
+              div.perfomer-img-div(style='background-image:url("/images/Trio-Lucerne.jpg")')
+                div.player-iframe
+                  iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A31OTA4TyMwip3HrBmMRLSn" width="100%" height="380" frameborder="0" allowtransparency="true")
+                i.fa.fa-play-circle(aria-hidden="true")
+              div.comment-div
+                p: strong Goldberg Trio Lucerne, 2011
 
       //- OTHER VERSIONS
-      div.box.col-xs-6.col-sm-12
+      div.box.col-xs-6.col-sm-12#otherversions
         div.title-box
-          h4 Harpsichord Versions
+          h4 Other Versions
         div.content-box
-          //- Andreas Staier
+          //- Jacques Loussier Trio
           div.col-xs-12.col-sm-6.col-lg-4
             div.info-box-content
-              div.perfomer-img-div(style='background-image:url("/images/andreas-staier.jpg")')
+              div.perfomer-img-div(style='background-image:url("/images/jacquesloussiertrio.jpg")')
                 div.player-iframe
-                  iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A3I7yCh1xt7hDlkT8FnXmNI" width="100%" height="380" frameborder="0" allowtransparency="true")
+                  iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A7eRBMRU1WFFDul4ryLyH0K" width="100%" height="380" frameborder="0" allowtransparency="true")
                 i.fa.fa-play-circle(aria-hidden="true")
               div.comment-div
-                p: strong Andreas Staier, 2015
+                p: strong Jacques Loussier Trio, 2000
 
 block scripts
   script(type="text/javascript" src='/javascripts/goldberg-versions.js')
