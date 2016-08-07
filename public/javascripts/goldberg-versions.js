@@ -19,6 +19,12 @@ $(document).ready(function() {
 
   })();
 
+  $('.nav-toggle-btn').click(function() {
+    $(".box").toggleClass('col-sm-10');
+  });
+
+
+
 
 
 

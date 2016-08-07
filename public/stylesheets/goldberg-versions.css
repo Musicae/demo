@@ -1,8 +1,10 @@
+ /* LAYOUT */
+
  body {
     overflow-x: hidden;
  }
 
-/* Toggle Styles */
+/* SIDEBAR */
 
 .sidebar {
     position: fixed;
@@ -45,6 +47,15 @@
   transform: translate3d(200px, 0, 0);
 }
 
+/* PAGE CONTENT */
+
+/*.page-content-wrapper-margin-left {
+  margin-left: 100px;
+}
+*/
+.page-content-wrapper {
+  margin: 50px;
+}
 
 .box {
   border-radius: 4px;
