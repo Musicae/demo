@@ -6,39 +6,52 @@ block stylesheets
   link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
 
 block content
-
-
   div#wrapper
+
+    //- SIDEBAR
     div.sidebar
       a(href="#").nav-toggle-btn#menu-icon-layout
         i.fa.fa-bars(aria-hidden="true")
       div.sidebarcontent-div
         ul.sidebar-nav
-          a.versioncategory(href="#referenceversion") Reference versions
-          li.sidebar-brand: a(href="#") Glenn Gould, 1981
-          li.sidebar-brand: a(href="#") Murray Perahia, 2000
-          li.sidebar-brand: a(href="#") Glenn Gould, 1955
+          div.dropdown-versioncategory
+            a.versioncategory.droplink(href="#referenceversion") Reference versions
+            div.dropdown-content
+              li.sidebar-brand: a(href="#") Glenn Gould, 1981
+              li.sidebar-brand: a(href="#") Murray Perahia, 2000
+              li.sidebar-brand: a(href="#") Glenn Gould, 1955
         ul.sidebar-nav
-          a.versioncategory(href="#newversions") New versions
-          li.sidebar-brand: a(href="#") Alexandre Tharaud, 2015
-          li.sidebar-brand: a(href="#") Nicholas Angelich, 2011
-          li.sidebar-brand: a(href="#") Avner Arad, 2011
-          li.sidebar-brand: a(href="#") Andrea Bacchetti, 2006
-          li.sidebar-brand: a(href="#") Tzimon Barto, 2015
+          div.dropdown-versioncategory
+            a.versioncategory.droplink(href="#newversions") New versions
+            div.dropdown-content
+              li.sidebar-brand: a(href="#") Alexandre Tharaud, 2015
+              li.sidebar-brand: a(href="#") Nicholas Angelich, 2011
+              li.sidebar-brand: a(href="#") Avner Arad, 2011
+              li.sidebar-brand: a(href="#") Andrea Bacchetti, 2006
+              li.sidebar-brand: a(href="#") Tzimon Barto, 2015
         ul.sidebar-nav
-          a.versioncategory(href="#harpsichordversions") Harpsichord versions
-          li.sidebar-brand: a(href="#") Andreas Staier, 2015
-          li.sidebar-brand: a(href="#") Luc Beauséjour, 2006
+          div.dropdown-versioncategory
+            a.versioncategory.droplink(href="#harpsichordversions") Harpsichord versions
+            div.dropdown-content
+              li.sidebar-brand: a(href="#") Andreas Staier, 2015
+              li.sidebar-brand: a(href="#") Luc Beauséjour, 2006
         ul.sidebar-nav
-          a.versioncategory(href="#organversions") Organ versions
-          li.sidebar-brand: a(href="#") Hansjörg Albrecht, 2008
+          div.dropdown-versioncategory
+            a.versioncategory.droplink(href="#organversions") Organ versions
+            div.dropdown-content
+              li.sidebar-brand: a(href="#") Hansjörg Albrecht, 2008
         ul.sidebar-nav
-          a.versioncategory(href="#stringtrio") String Trio
-          li.sidebar-brand: a(href="#") Goldberg Trio Lucerne, 2011
+          div.dropdown-versioncategory
+            a.versioncategory.droplink(href="#stringtrio") String Trio
+            div.dropdown-content
+              li.sidebar-brand: a(href="#") Goldberg Trio Lucerne, 2011
         ul.sidebar-nav
-          a.versioncategory(href="#otherversions") Other Versions
-          li.sidebar-brand: a(href="#") Jacques Loussier Trio, 2000
+          div.dropdown-versioncategory
+            a.versioncategory.droplink(href="#otherversions") Other Versions
+            div.dropdown-content
+              li.sidebar-brand: a(href="#") Jacques Loussier Trio, 2000
 
+    //- PAGE CONTENT
     div.page-content-wrapper
       //- div.container
       div.col-xs-12

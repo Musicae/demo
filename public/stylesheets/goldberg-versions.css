@@ -26,6 +26,28 @@
   transform: translate3d(0, 0, 0);
 }
 
+.active-nav .page-content-wrapper {
+  transform: translate3d(0, 0, 0);
+}
+
+/* dropdownmenu*/
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-versioncategory:hover .dropdown-content {
+    display: block;
+}
+
+/* layout content */
+
 .sidebar-nav {
   list-style: none;
   padding: 5px 20px;
@@ -66,9 +88,7 @@
   padding-left: 15px;
 }
 
-.active-nav .page-content-wrapper {
-  transform: translate3d(0, 0, 0);
-}
+
 
 /* PAGE CONTENT */
 
