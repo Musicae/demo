@@ -74,7 +74,17 @@ block content
                   iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A1aCpHSQE5ghxibsQ5gkBe0" width="100%" height="380" frameborder="0" allowtransparency="true")
                 i.fa.fa-play-circle(aria-hidden="true")#play-black
               div.comment-div
-                p: strong Glenn Gould, 1981
+                div.votes
+                  i.fa.fa-sort-asc(aria-hidden="true")
+                  p#countvotes 300
+                div.details
+                  p: strong Glenn Gould, 1981
+                  p  Unique, Slow, Graceful
+                div.comments
+                  div.commenticon
+                    i.fa.fa-comment-o(aria-hidden="true")#commentcolor
+                  div.commentcounter
+                    p 10
 
           //- Murray Perahia 2000
           div.col-xs-12.col-sm-6.col-lg-4
