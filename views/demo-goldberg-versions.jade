@@ -6,63 +6,19 @@ block stylesheets
   link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
 
 block content
-  div#wrapper
+  div.col-xs-12#page-content
+    div.col-xs-12
+      div#title
+        h1: strong The Goldberg Variations, BWV 988
+        h2 Composer: Johann Sebastian Bach, 1741
+        p The Goldberg Variations is a work written for harpsichord consisting of an aria and a set of 30 variations.
 
-    //- SIDEBAR
-    div.sidebar
-      a(href="#").nav-toggle-btn#menu-icon-layout
-        i.fa.fa-bars(aria-hidden="true")
-      div.sidebarcontent-div
-        ul.sidebar-nav
-          div.dropdown-versioncategory
-            a.versioncategory.droplink(href="#referenceversion") Reference versions
-            div.dropdown-content
-              li.sidebar-brand: a(href="#") Glenn Gould, 1981
-              li.sidebar-brand: a(href="#") Murray Perahia, 2000
-              li.sidebar-brand: a(href="#") Glenn Gould, 1955
-        ul.sidebar-nav
-          div.dropdown-versioncategory
-            a.versioncategory.droplink(href="#newversions") New versions
-            div.dropdown-content
-              li.sidebar-brand: a(href="#") Alexandre Tharaud, 2015
-              li.sidebar-brand: a(href="#") Nicholas Angelich, 2011
-              li.sidebar-brand: a(href="#") Avner Arad, 2011
-              li.sidebar-brand: a(href="#") Andrea Bacchetti, 2006
-              li.sidebar-brand: a(href="#") Tzimon Barto, 2015
-        ul.sidebar-nav
-          div.dropdown-versioncategory
-            a.versioncategory.droplink(href="#harpsichordversions") Harpsichord versions
-            div.dropdown-content
-              li.sidebar-brand: a(href="#") Andreas Staier, 2015
-              li.sidebar-brand: a(href="#") Luc Beauséjour, 2006
-        ul.sidebar-nav
-          div.dropdown-versioncategory
-            a.versioncategory.droplink(href="#organversions") Organ versions
-            div.dropdown-content
-              li.sidebar-brand: a(href="#") Hansjörg Albrecht, 2008
-        ul.sidebar-nav
-          div.dropdown-versioncategory
-            a.versioncategory.droplink(href="#stringtrio") String Trio
-            div.dropdown-content
-              li.sidebar-brand: a(href="#") Goldberg Trio Lucerne, 2011
-        ul.sidebar-nav
-          div.dropdown-versioncategory
-            a.versioncategory.droplink(href="#otherversions") Other Versions
-            div.dropdown-content
-              li.sidebar-brand: a(href="#") Jacques Loussier Trio, 2000
-
-    //- PAGE CONTENT
-    div.page-content-wrapper
-      //- div.container
-      div.col-xs-12
-          div#title
-          h1: strong The Goldberg Variations, BWV 988
-          h2 Composer: Johann Sebastian Bach, 1741
-          p The Goldberg Variations is a work written for harpsichord consisting of an aria and a set of 30 variations.
-
-      //- div.container
-        //- REFERENCE VERSIONS
-      div.box.col-xs-12#referenceversion
+    div.col-xs-12
+      //- REFERENCE VERSIONS
+      div.box.col-xs-12
+        //- ANCRE POUR LE SCROLL
+        div.scroll-anchor
+          div#referenceversions
         div.title-box
           h4 Reference Versions
         div.content-box
@@ -74,18 +30,17 @@ block content
                   iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A1aCpHSQE5ghxibsQ5gkBe0" width="100%" height="380" frameborder="0" allowtransparency="true")
                 i.fa.fa-play-circle(aria-hidden="true")#play-black
               div.comment-div
-                div.votes
+                a(href="#").votes
                   i.fa.fa-sort-asc(aria-hidden="true")
-                  p#countvotes 300
+                  p 300
                 div.details
                   p: strong Glenn Gould, 1981
                   p  Unique, Slow, Graceful
-                div.comments
+                a(href="#").comments
                   div.commenticon
                     i.fa.fa-comment-o(aria-hidden="true")#commentcolor
                   div.commentcounter
                     p 10
-
           //- Murray Perahia 2000
           div.col-xs-12.col-sm-6.col-lg-4
               div.info-box-content
@@ -95,7 +50,6 @@ block content
                   i.fa.fa-play-circle(aria-hidden="true")
                 div.comment-div
                   p: strong Murray Perahia, 2000
-
           //- Glenn Gould 1955
           div.col-xs-12.col-sm-6.col-lg-4
             div.info-box-content
@@ -107,7 +61,10 @@ block content
                 p: strong Glenn Gould, 1955
 
       //- NEW VERSIONS
-      div.box.col-xs-6.col-sm-12#newversions
+      div.col-xs-12
+        //- ANCRE POUR LE SCROLL
+        div.scroll-anchor
+          div#newversions
         div.title-box
           h4 New Versions
         div.content-box
@@ -120,7 +77,6 @@ block content
                 i.fa.fa-play-circle(aria-hidden="true")
               div.comment-div
                 p: strong Alexandre Tharaud, 2015
-          div.content-box
           //- Nicholas Angelich
           div.col-xs-12.col-sm-6.col-lg-4
             div.info-box-content
@@ -159,7 +115,10 @@ block content
                 p: strong Tzimon Barto, 2015
 
       //- HARPHSICHORD VERSIONS
-      div.box.col-xs-6.col-sm-12#harpsichordversions
+      div.box.col-xs-12
+        //- ANCRE POUR LE SCROLL
+        div.scroll-anchor
+          div#harpsichordversions
         div.title-box
           h4 Harpsichord Versions
         div.content-box
@@ -183,7 +142,10 @@ block content
                 p: strong Luc Beauséjour, 2006
 
       //- ORGAN VERSIONS
-      div.box.col-xs-6.col-sm-12#organversions
+      div.box.col-xs-12
+        //- ANCRE POUR LE SCROLL
+        div.scroll-anchor
+          div#organversions
         div.title-box
           h4 Organ Versions
         div.content-box
@@ -198,7 +160,10 @@ block content
                 p: strong Hansjörg Albrecht, 2008
 
       //- STRING TRIO
-      div.box.col-xs-6.col-sm-12#stringtrio
+      div.box.col-xs-12
+        //- ANCRE POUR LE SCROLL
+        div.scroll-anchor
+          div#stringtrio
         div.title-box
           h4 String Trio
         div.content-box
@@ -213,7 +178,10 @@ block content
                 p: strong Goldberg Trio Lucerne, 2011
 
       //- OTHER VERSIONS
-      div.box.col-xs-6.col-sm-12#otherversions
+      div.box.col-xs-12
+        //- ANCRE POUR LE SCROLL
+        div.scroll-anchor
+          div#otherversions
         div.title-box
           h4 Other Versions
         div.content-box
@@ -227,6 +195,47 @@ block content
               div.comment-div
                 p: strong Jacques Loussier Trio, 2000
 
+  //- SIDEBAR
+  div#sidebar-container(data-spy="affix").col-sm-2
+    a(href="#")#nav-open
+      i.fa.fa-bars(aria-hidden="true")
+    a(href="#")#nav-close
+      i.fa.fa-times(aria-hidden="true")
+    div#sidebar
+      ul.nav
+        li.sidebar-nav
+          a.versioncategory.active(href="#") Reference versions
+          ul.sidebar-dropdown
+            li: a.js-scrollTo(href="#referenceversions") Glenn Gould, 1981
+            li: a.js-scrollTo(href="#referenceversions") Murray Perahia, 2000
+            li: a.js-scrollTo(href="#referenceversions") Glenn Gould, 1955
+        li.sidebar-nav
+          a.versioncategory(href="#") New versions
+          ul.sidebar-dropdown
+            li: a.js-scrollTo(href="#newversions") Alexandre Tharaud, 2015
+            li: a.js-scrollTo(href="#newversions") Nicholas Angelich, 2011
+            li: a.js-scrollTo(href="#newversions") Avner Arad, 2011
+            li: a.js-scrollTo(href="#newversions") Andrea Bacchetti, 2006
+            li: a.js-scrollTo(href="#newversions") Tzimon Barto, 2015
+        li.sidebar-nav
+          a.versioncategory(href="#") Harpsichord versions
+          ul.sidebar-dropdown
+            li: a.js-scrollTo(href="#harpsichordversions") Andreas Staier, 2015
+            li: a.js-scrollTo(href="#harpsichordversions") Luc Beauséjour, 2006
+        li.sidebar-nav
+          a.versioncategory(href="#") Organ versions
+          ul.sidebar-dropdown
+            li: a.js-scrollTo(href="#organversions") Hansjörg Albrecht, 2008
+        li.sidebar-nav
+          a.versioncategory(href="#") String Trio
+          ul.sidebar-dropdown
+            li: a.js-scrollTo(href="#stringtrio") Goldberg Trio Lucerne, 2011
+        li.sidebar-nav
+          a.versioncategory(href="#") Other Versions
+          ul.sidebar-dropdown
+            li: a.js-scrollTo(href="#otherversions") Jacques Loussier Trio, 2000
+
 block scripts
+  script(type="text/javascript" src='/javascripts/main.js')
   script(type="text/javascript" src='/javascripts/goldberg-versions.js')
 
