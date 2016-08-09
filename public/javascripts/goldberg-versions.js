@@ -1,10 +1,15 @@
 $(document).ready(function() {
+  var timeOut;
 
   $('.perfomer-img-div').mouseenter(function() {
-    $(this).children().first().animate({'top': '0'}, 400);
+    var imgDiv = $(this);
+    timeOut = setTimeout(function() {
+      imgDiv.children().first().animate({'top': '0'}, 400);
+    }, 500);
   });
 
   $('.perfomer-img-div').mouseleave(function() {
+    clearTimeout(timeOut);
     $(this).children().first().animate({'top': '300'}, 400);
   });
 
