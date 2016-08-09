@@ -26,7 +26,7 @@ html
                 div.col-sm-4.multi-column-dropdown
                   ul
                     li: a(href="#"): strong View All Composers
-                    li: a(href="#"): strong Featured:
+                    li: a: strong Featured:
                     li: a(href="#") Bach, Johann Sebastian
                     li: a(href="#") Beethoven, Ludwig van
                     li: a(href="#") Berlioz, Hector
@@ -93,9 +93,8 @@ html
                     li: a(href="#") Separated link
                     li.divider(role="separator")
                     li: a(href="#") One more separated link
-
           li.dropdown
-            a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Perfomers
+            a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Performers
             ul.dropdown-menu
               li: a(href="#") Action
               li: a(href="#") Another action
@@ -157,6 +156,16 @@ html
               li: a(href="#") Separated link
               li.divider(role="separator")
               li: a(href="#") One more separated link
+          li.dropdown
+            a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Eras
+            ul.dropdown-menu
+              li: a(href="#") Early and Medieval
+              li: a(href="#") Renaissance
+              li: a(href="#") Baroque
+              li: a(href="#") Classical
+              li: a(href="#") Romantic
+              li: a(href="#") Modern
+              li: a(href="#") Contemporary
         div.navbar-right#sign-in-div
           ul.nav.navbar-nav
             li: a(href="#") Sign in / Register
