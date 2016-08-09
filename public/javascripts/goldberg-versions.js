@@ -35,11 +35,5 @@ $(document).ready(function() {
     $(this).next().toggle();
   });
 
-  $('body').scrollspy({ target: '#sidebar' });
-
-  $('#referenceversions').on('activate.bs.scrollspy', function () {
-    console.error("scroll");
-    $(this).addClass('active');
-  });
-
+  $('body').scrollspy({ target: '#sidebar', offset: 200 });
 });

@@ -49,7 +49,7 @@ body {
   background-color: yellow;
 }
 
-#sidebar a.active {
+#sidebar .sidebar-nav.active > a {
   color: red;
 }
 
