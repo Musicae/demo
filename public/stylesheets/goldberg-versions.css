@@ -87,6 +87,10 @@ body {
   margin-bottom: 70px;
 }
 
+#sidebar a:focus {
+  background-color: transparent;
+}
+
 /* PAGE CONTENT */
 
 @media (min-width: 900px) {
