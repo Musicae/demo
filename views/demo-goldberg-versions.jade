@@ -1,241 +1,70 @@
 extends ./layout.jade
 
 block stylesheets
-  link(rel='stylesheet', href='/stylesheets/style.css')
-  link(rel='stylesheet', href='/stylesheets/goldberg-versions.css')
-  link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+	link(rel='stylesheet', href='/stylesheets/style.css')
+	link(rel='stylesheet', href='/stylesheets/goldberg-versions.css')
+	link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
 
 block content
-  div.col-xs-12#page-content
-    div.col-xs-12
-      div#title
-        h1: strong The Goldberg Variations, BWV 988
-        h2 Composer: Johann Sebastian Bach, 1741
-        p The Goldberg Variations is a work written for harpsichord consisting of an aria and a set of 30 variations.
+	div.col-xs-12#page-content
+		div.col-xs-12
+			div#title
+				h1: strong The Goldberg Variations, BWV 988
+				h2 Composer: Johann Sebastian Bach, 1741
+				p The Goldberg Variations is a work written for harpsichord consisting of an aria and a set of 30 variations.
 
-    div.col-xs-12
-      //- REFERENCE VERSIONS
-      div.box.col-xs-12
-        //- ANCRE POUR LE SCROLL
-        div.scroll-anchor
-          div#referenceversions
-        div.title-box
-          h4 Reference Versions
-        div.content-box
-          //- Glenn Gould 1981
-          div.col-xs-12.col-sm-6.col-lg-4
-            div.info-box-content
-              div.perfomer-img-div(style='background-image:url("/images/glenn-gould-1981.jpg")')
-                div.player-iframe
-                  iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A1aCpHSQE5ghxibsQ5gkBe0" width="100%" height="380" frameborder="0" allowtransparency="true")
-                i.fa.fa-play-circle(aria-hidden="true")#play-black
-              div.comment-div
-                a(href="#").votes
-                  i.fa.fa-sort-asc(aria-hidden="true")
-                  p 300
-                div.details
-                  p: strong Glenn Gould, 1981
-                  p  Unique, Slow, Graceful
-                a(href="#").comments
-                  div.commenticon
-                    i.fa.fa-comment-o(aria-hidden="true")#commentcolor
-                  div.commentcounter
-                    p 10
-          //- Murray Perahia 2000
-          div.col-xs-12.col-sm-6.col-lg-4
-              div.info-box-content
-                div.perfomer-img-div(style='background-image:url("/images/murray-perahia.jpg")')
-                  div.player-iframe
-                    iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A2ecywJZyq9FeZWhKUT0kIq" width="100%" height="380" frameborder="0" allowtransparency="true")
-                  i.fa.fa-play-circle(aria-hidden="true")
-                div.comment-div
-                  p: strong Murray Perahia, 2000
-          //- Glenn Gould 1955
-          div.col-xs-12.col-sm-6.col-lg-4
-            div.info-box-content
-              div.perfomer-img-div(style='background-image:url("/images/glenn-gould-1955.jpg")')
-                div.player-iframe
-                  iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A0ogm04LcccovebvmP9Mo6W" width="100%" height="380" frameborder="0" allowtransparency="true")
-                i.fa.fa-play-circle(aria-hidden="true")
-              div.comment-div
-                p: strong Glenn Gould, 1955
+		div.col-xs-12
+			each group, groupIndex in goldbergContent
+				div.box.col-xs-12
+					//- ANCRE POUR LE SCROLL
+					div.scroll-anchor
+						div(id="versionGroup#{groupIndex}")
+					div.title-box
+						h4 #{group.blockName}
+					each version in group.blockVersions
+						div.content-box
+							div.col-xs-12.col-sm-6.col-lg-4
+								div.info-box-content
+									div.perfomer-img-div(style='background-image:url("#{version.imageUrl}")')
+										div.player-iframe
+											iframe(src="#{version.spotifyIframe}" width="100%" height="380" frameborder="0" allowtransparency="true")
+										if version.blackPlayer
+											i.fa.fa-play-circle(aria-hidden="true")#play-black
+										else
+											i.fa.fa-play-circle(aria-hidden="true")
+									div.comment-div
+										a(href="#").votes
+											i.fa.fa-sort-asc(aria-hidden="true")
+											p= version.upvotesCount
+										div.details
+											p: strong #{version.performer}, #{version.date}
+											p
+												each keyword, index in version.keywords
+													| #{keyword}
+													if index < version.keywords.length - 1
+														|, 
+										a(href="#").comments
+											div.commenticon
+												i.fa.fa-comment-o(aria-hidden="true")#commentcolor
+											div.commentcounter
+												p= version.commentsCount
 
-      //- NEW VERSIONS
-      div.col-xs-12
-        //- ANCRE POUR LE SCROLL
-        div.scroll-anchor
-          div#newversions
-        div.title-box
-          h4 New Versions
-        div.content-box
-          //- Alexandre Tharaud 200
-          div.col-xs-12.col-sm-6.col-lg-4
-            div.info-box-content
-              div.perfomer-img-div(style='background-image:url("/images/alexandre-tharaud.jpg")')
-                div.player-iframe
-                  iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A6pyy2WoFZvmohjwHOzLzkt" width="100%" height="380" frameborder="0" allowtransparency="true")
-                i.fa.fa-play-circle(aria-hidden="true")
-              div.comment-div
-                p: strong Alexandre Tharaud, 2015
-          //- Nicholas Angelich
-          div.col-xs-12.col-sm-6.col-lg-4
-            div.info-box-content
-              div.perfomer-img-div(style='background-image:url("/images/Nicholas-Angelich.jpg")')
-                div.player-iframe
-                  iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A3zKmTIFDNOwBgHUEj5zbfV" width="100%" height="380" frameborder="0" allowtransparency="true")
-                i.fa.fa-play-circle(aria-hidden="true")
-              div.comment-div
-                p: strong Nicholas Angelich, 2011
-          //- Avner Arad
-          div.col-xs-12.col-sm-6.col-lg-4
-            div.info-box-content
-              div.perfomer-img-div(style='background-image:url("/images/Arad-Avner.jpg")')
-                div.player-iframe
-                  iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A5LPqAhrJeLJJTOusuCGoIL" width="100%" height="380" frameborder="0" allowtransparency="true")
-                i.fa.fa-play-circle(aria-hidden="true")
-              div.comment-div
-                p: strong Avner Arad, 2011
-          //- Andrea Bacchetti
-          div.col-xs-12.col-sm-6.col-lg-4
-            div.info-box-content
-              div.perfomer-img-div(style='background-image:url("/images/Bacchetti-Andrea.jpg")')
-                div.player-iframe
-                  iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A4MRbZKtQP0hoILkG8EazrV" width="100%" height="380" frameborder="0" allowtransparency="true")
-                i.fa.fa-play-circle(aria-hidden="true")
-              div.comment-div
-                p: strong Andrea Bacchetti, 2006
-          //- Tzimon Barto
-          div.col-xs-12.col-sm-6.col-lg-4
-            div.info-box-content
-              div.perfomer-img-div(style='background-image:url("/images/Tzimon-Barto.jpg")')
-                div.player-iframe
-                  iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A5yXrtDqKN3VOFQOpd7maFY" width="100%" height="380" frameborder="0" allowtransparency="true")
-                i.fa.fa-play-circle(aria-hidden="true")
-              div.comment-div
-                p: strong Tzimon Barto, 2015
-
-      //- HARPHSICHORD VERSIONS
-      div.box.col-xs-12
-        //- ANCRE POUR LE SCROLL
-        div.scroll-anchor
-          div#harpsichordversions
-        div.title-box
-          h4 Harpsichord Versions
-        div.content-box
-          //- Andreas Staier
-          div.col-xs-12.col-sm-6.col-lg-4
-            div.info-box-content
-              div.perfomer-img-div(style='background-image:url("/images/andreas-staier.jpg")')
-                div.player-iframe
-                  iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A3I7yCh1xt7hDlkT8FnXmNI" width="100%" height="380" frameborder="0" allowtransparency="true")
-                i.fa.fa-play-circle(aria-hidden="true")
-              div.comment-div
-                p: strong Andreas Staier, 2015
-          //- Luc Beauséjour
-          div.col-xs-12.col-sm-6.col-lg-4
-            div.info-box-content
-              div.perfomer-img-div(style='background-image:url("/images/Luc-Beausejour.jpg")')
-                div.player-iframe
-                  iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A3t8weMtWRWnjVaa8w5dcDp" width="100%" height="380" frameborder="0" allowtransparency="true")
-                i.fa.fa-play-circle(aria-hidden="true")
-              div.comment-div
-                p: strong Luc Beauséjour, 2006
-
-      //- ORGAN VERSIONS
-      div.box.col-xs-12
-        //- ANCRE POUR LE SCROLL
-        div.scroll-anchor
-          div#organversions
-        div.title-box
-          h4 Organ Versions
-        div.content-box
-          //- Andreas Staier
-          div.col-xs-12.col-sm-6.col-lg-4
-            div.info-box-content
-              div.perfomer-img-div(style='background-image:url("/images/Hansjorg-Albrecht.jpg")')
-                div.player-iframe
-                  iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A1rC4ov7GO6ceA63T2DKQOJ" width="100%" height="380" frameborder="0" allowtransparency="true")
-                i.fa.fa-play-circle(aria-hidden="true")
-              div.comment-div
-                p: strong Hansjörg Albrecht, 2008
-
-      //- STRING TRIO
-      div.box.col-xs-12
-        //- ANCRE POUR LE SCROLL
-        div.scroll-anchor
-          div#stringtrio
-        div.title-box
-          h4 String Trio
-        div.content-box
-          //- Goldberg Trio Lucerne
-          div.col-xs-12.col-sm-6.col-lg-4
-            div.info-box-content
-              div.perfomer-img-div(style='background-image:url("/images/Trio-Lucerne.jpg")')
-                div.player-iframe
-                  iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A31OTA4TyMwip3HrBmMRLSn" width="100%" height="380" frameborder="0" allowtransparency="true")
-                i.fa.fa-play-circle(aria-hidden="true")
-              div.comment-div
-                p: strong Goldberg Trio Lucerne, 2011
-
-      //- OTHER VERSIONS
-      div.box.col-xs-12
-        //- ANCRE POUR LE SCROLL
-        div.scroll-anchor
-          div#otherversions
-        div.title-box
-          h4 Other Versions
-        div.content-box
-          //- Jacques Loussier Trio
-          div.col-xs-12.col-sm-6.col-lg-4
-            div.info-box-content
-              div.perfomer-img-div(style='background-image:url("/images/jacquesloussiertrio.jpg")')
-                div.player-iframe
-                  iframe(src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A7eRBMRU1WFFDul4ryLyH0K" width="100%" height="380" frameborder="0" allowtransparency="true")
-                i.fa.fa-play-circle(aria-hidden="true")
-              div.comment-div
-                p: strong Jacques Loussier Trio, 2000
-
-  //- SIDEBAR
-  div#sidebar-container(data-spy="affix").col-sm-2
-    a(href="#")#nav-open
-      i.fa.fa-bars(aria-hidden="true")
-    a(href="#")#nav-close
-      i.fa.fa-times(aria-hidden="true")
-    div#sidebar
-      ul.nav.navbar-nav
-        li.sidebar-nav
-          a.versioncategory.active(href="#") Reference versions
-          ul.sidebar-dropdown
-            li: a.js-scrollTo(href="#referenceversions") Glenn Gould, 1981
-            li: a.js-scrollTo(href="#referenceversions") Murray Perahia, 2000
-            li: a.js-scrollTo(href="#referenceversions") Glenn Gould, 1955
-        li.sidebar-nav
-          a.versioncategory(href="#") New versions
-          ul.sidebar-dropdown
-            li: a.js-scrollTo(href="#newversions") Alexandre Tharaud, 2015
-            li: a.js-scrollTo(href="#newversions") Nicholas Angelich, 2011
-            li: a.js-scrollTo(href="#newversions") Avner Arad, 2011
-            li: a.js-scrollTo(href="#newversions") Andrea Bacchetti, 2006
-            li: a.js-scrollTo(href="#newversions") Tzimon Barto, 2015
-        li.sidebar-nav
-          a.versioncategory(href="#") Harpsichord versions
-          ul.sidebar-dropdown
-            li: a.js-scrollTo(href="#harpsichordversions") Andreas Staier, 2015
-            li: a.js-scrollTo(href="#harpsichordversions") Luc Beauséjour, 2006
-        li.sidebar-nav
-          a.versioncategory(href="#") Organ versions
-          ul.sidebar-dropdown
-            li: a.js-scrollTo(href="#organversions") Hansjörg Albrecht, 2008
-        li.sidebar-nav
-          a.versioncategory(href="#") String Trio
-          ul.sidebar-dropdown
-            li: a.js-scrollTo(href="#stringtrio") Goldberg Trio Lucerne, 2011
-        li.sidebar-nav
-          a.versioncategory(href="#") Other Versions
-          ul.sidebar-dropdown
-            li: a.js-scrollTo(href="#otherversions") Jacques Loussier Trio, 2000
+	//- SIDEBAR
+	div#sidebar-container(data-spy="affix").col-sm-2
+		a(href="#")#nav-open
+			i.fa.fa-bars(aria-hidden="true")
+		a(href="#")#nav-close
+			i.fa.fa-times(aria-hidden="true")
+		div#sidebar
+			ul.nav.navbar-nav
+				each group, groupIndex in goldbergContent
+					li.sidebar-nav
+						a.js-scrollTo.versioncategory(href="#versionGroup#{groupIndex}") #{group.blockName}
+						ul.sidebar-dropdown
+							each version in group.blockVersions
+								li: a #{version.performer}, #{version.date}
 
 block scripts
-  script(type="text/javascript" src='/javascripts/main.js')
-  script(type="text/javascript" src='/javascripts/goldberg-versions.js')
+	script(type="text/javascript" src='/javascripts/main.js')
+	script(type="text/javascript" src='/javascripts/goldberg-versions.js')
 

@@ -33,12 +33,12 @@ $(document).ready(function() {
     $('#nav-open').show();
   });
 
-  $('.sidebar-nav > a.active').next().show();
+  // $('.sidebar-dropdown').first().show();
 
-  $('.sidebar-nav > a').click(function(e) {
-    e.preventDefault();
-    $(this).next().toggle();
-  });
+  // $('.sidebar-nav > a').click(function(e) {
+  //   e.preventDefault();
+  //   $(this).next().toggle();
+  // });
 
-  $('body').scrollspy({ target: '#sidebar', offset: 200 });
+  $('body').scrollspy({ target: '#sidebar', offset: 250 });
 });
