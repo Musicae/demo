@@ -24,7 +24,7 @@ var goldbergContent = [
 				'commentsCount': 10,
 				'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A1aCpHSQE5ghxibsQ5gkBe0',
 				'imageUrl': '/images/glenn-gould-old.jpg',
-        'credit': '<a href="https://www.flickr.com/photos/music2020/10735249225/in/album-72157637397776465/">Flickr</a>',
+				'credit': '<a href="https://www.flickr.com/photos/music2020/10735249225/in/album-72157637397776465/">Flickr</a>',
 				// 'blackPlayer': true
 			},
 			{
