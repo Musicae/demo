@@ -1,6 +1,7 @@
 body {
 	font: 16px "Quattrocento Sans", Helvetica, Arial, sans-serif;
 	color: rgb(15,15,15);
+	padding-top: 90px;
 }
 
 a, a:focus {
@@ -22,12 +23,12 @@ a:hover {
 }
 
 .navbar {
+	position: fixed;
 	background-color: white;
 	border: none;
 	border-bottom: 1px solid #980008;
 	border-radius: 0;
 	margin: 0;
-	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 12;
@@ -35,6 +36,10 @@ a:hover {
 	width: 100%;
 	font-size: 17px;
 	font-weight: 700;
+}
+
+#main-menu.affix {
+	box-shadow: 0 1px 3px #DFDFDF;
 }
 
 .navbar-brand,
