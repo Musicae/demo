@@ -1,105 +1,105 @@
 extends ./layout.jade
 
 block stylesheets
-  link(rel='stylesheet', href='/stylesheets/style.css')
-  link(rel='stylesheet', href='/slick/slick.css')
-  link(rel='stylesheet', href='/slick/slick-theme.css')
-  link(rel='stylesheet', href='/stylesheets/interpretation.css')
+	link(rel='stylesheet', href='/stylesheets/style.css')
+	link(rel='stylesheet', href='/slick/slick.css')
+	link(rel='stylesheet', href='/slick/slick-theme.css')
+	link(rel='stylesheet', href='/stylesheets/interpretation.css')
 
 block content
-  div.col-xs-12#main-image-div(style="background-image: url('/images/glenn-gould-1981.jpg')")
+	div.col-xs-12#main-image-div(style="background-image: url('/images/glenn-gould-1981.jpg')")
 
-  h1#image-title Glenn Gould, 1981
-    small  <
-      a(href="#") Goldberg Variations, BMW 998
-      |  <
-      a(href="#") Johann Sebastian Bach
-  div#player-div
-    div#hover-part
-      p#listen-text Listen
-    div#player-part
-      div#player-choice-div
-        br
-        p Please select a service:
-        br
-        br
-        p: a.player-choice(href="#" data-player="spotify")
-          img(src="/images/Spotify_Logo.png" alt="Spotify")
-        br
-        br
-        p: a.player-choice(href="#" data-player="applemusic")
-          img(src="/images/Apple_Music_Badge.svg" alt="Apple Music")
-        br
-        p: a.player-choice(href="#" data-player="deezer")
-          img(src="/images/Deezer_Logo.png" alt="Deezer")
+	h1#image-title Glenn Gould, 1981
+		small  <
+			a(href="#") Goldberg Variations, BMW 998
+			|  <
+			a(href="#") Johann Sebastian Bach
+	div#player-div
+		div#hover-part
+			p#listen-text Listen
+		div#player-part
+			div#player-choice-div
+				br
+				p Please select a service:
+				br
+				br
+				p: a.player-choice(href="#" data-player="spotify")
+					img(src="/images/Spotify_Logo.png" alt="Spotify")
+				br
+				br
+				p: a.player-choice(href="#" data-player="applemusic")
+					img(src="/images/Apple_Music_Badge.svg" alt="Apple Music")
+				br
+				p: a.player-choice(href="#" data-player="deezer")
+					img(src="/images/Deezer_Logo.png" alt="Deezer")
 
-  div#main-container
-    div.col-xs-12.col-sm-9.main-block
-      div.col-sm-4.info-box-container
-        div.info-box-content
-          img(src="/images/mike.png")
-          h2 About this interpretation
-          p: strong Recording date: 1981
-          p: a.more-link(href="#") Read more
-          p.more-text Glenn Herbert Gould was a Canadian pianist who became one of the best-known and most celebrated classical pianists of the 20th century. He was particularly renowned as an interpreter of the keyboard music of Johann Sebastian Bach. His playing was distinguished by remarkable technical proficiency and capacity to articulate the polyphonic texture of Bach's music.
-      div.col-sm-4.info-box-container
-        div.info-box-content
-          img(src="/images/key.png")
-          h2 Glenn Gould
-          p: strong (1932-1982)
-          p Canadian Pianist
-          p: a.more-link(href="#") Read more
-          p.more-text Glenn Herbert Gould was a Canadian pianist who became one of the best-known and most celebrated classical pianists of the 20th century. He was particularly renowned as an interpreter of the keyboard music of Johann Sebastian Bach. His playing was distinguished by remarkable technical proficiency and capacity to articulate the polyphonic texture of Bach's music.
-      div.col-sm-4.info-box-container
-        div.info-box-content
-          img(src="/images/quaver.png")
-          h2 Goldberg Variations, BMW 998
-          p: strong Published: 1741
-          p: a.more-link(href="#") Read more
-          p.more-text The Goldberg Variations, BWV 988, is a work written for harpsichord by Johann Sebastian Bach, consisting of an aria and a set of 30 variations. First published in 1741, the work is considered to be one of the most important examples of variation form. The Variations are named after Johann Gottlieb Goldberg, who may have been the first performer.
-    div.col-xs-12.col-sm-3.main-block#external-links-container
-      div#external-links-content
-        p Upcoming concerts in Paris:
-        ul#concert-list
-          li: a(href="#") November 23rd, 2015:
-            br
-            strong Alexandre Tharaud
-            br
-            |  at Philharmonie de Paris
-          li: a(href="#") July 2nd, 2016:
-            br
-            strong Alexandre Tharaud
-            br
-            |  at Château de Versailles
-          a(href="#") See more...
-        br
-        p Purchase CD:
-        a(href="http://www.arkivmusic.com/classical/album.jsp?album_id=349)") $11.99 on ArkivMusic
+	div#main-container
+		div.col-xs-12.col-sm-9.main-block
+			div.col-sm-4.info-box-container
+				div.info-box-content
+					img(src="/images/mike.png")
+					h2 About this interpretation
+					p: strong Recording date: 1981
+					p: a.more-link(href="#") Read more
+					p.more-text Glenn Herbert Gould was a Canadian pianist who became one of the best-known and most celebrated classical pianists of the 20th century. He was particularly renowned as an interpreter of the keyboard music of Johann Sebastian Bach. His playing was distinguished by remarkable technical proficiency and capacity to articulate the polyphonic texture of Bach's music.
+			div.col-sm-4.info-box-container
+				div.info-box-content
+					img(src="/images/key.png")
+					h2 Glenn Gould
+					p: strong (1932-1982)
+					p Canadian Pianist
+					p: a.more-link(href="#") Read more
+					p.more-text Glenn Herbert Gould was a Canadian pianist who became one of the best-known and most celebrated classical pianists of the 20th century. He was particularly renowned as an interpreter of the keyboard music of Johann Sebastian Bach. His playing was distinguished by remarkable technical proficiency and capacity to articulate the polyphonic texture of Bach's music.
+			div.col-sm-4.info-box-container
+				div.info-box-content
+					img(src="/images/quaver.png")
+					h2 Goldberg Variations, BMW 998
+					p: strong Published: 1741
+					p: a.more-link(href="#") Read more
+					p.more-text The Goldberg Variations, BWV 988, is a work written for harpsichord by Johann Sebastian Bach, consisting of an aria and a set of 30 variations. First published in 1741, the work is considered to be one of the most important examples of variation form. The Variations are named after Johann Gottlieb Goldberg, who may have been the first performer.
+		div.col-xs-12.col-sm-3.main-block#external-links-container
+			div#external-links-content
+				p Upcoming concerts in Paris:
+				ul#concert-list
+					li: a(href="#") November 23rd, 2015:
+						br
+						strong Alexandre Tharaud
+						br
+						|  at Philharmonie de Paris
+					li: a(href="#") July 2nd, 2016:
+						br
+						strong Alexandre Tharaud
+						br
+						|  at Château de Versailles
+					a(href="#") See more...
+				br
+				p Purchase CD:
+				a(href="http://www.arkivmusic.com/classical/album.jsp?album_id=349)") $11.99 on ArkivMusic
 
-    div.slider-container-div.col-xs-12.main-block
-      h2 Other Glenn Gould recordings
-      br
-      div.slider-div
-        div
-          div.slider-content-div(style="background-image: url('/images/glenn-gould-1955.jpg')")
-        div
-          div.slider-content-div(style="background-image: url('/images/alexandre-tharaud.jpg')")
-        div
-          div.slider-content-div(style="background-image: url('/images/murray-perahia.jpg')")
-        div
-          div.slider-content-div(style="background-image: url('/images/wanda-landowska.jpg')")
-        div
-          div.slider-content-div(style="background-image: url('/images/andreas-staier.jpg')")
+		div.slider-container-div.col-xs-12.main-block
+			h2 Other Glenn Gould recordings
+			br
+			div.slider-div
+				div
+					div.slider-content-div(style="background-image: url('/images/glenn-gould-1955.jpg')")
+				div
+					div.slider-content-div(style="background-image: url('/images/alexandre-tharaud.jpg')")
+				div
+					div.slider-content-div(style="background-image: url('/images/murray-perahia.jpg')")
+				div
+					div.slider-content-div(style="background-image: url('/images/wanda-landowska.jpg')")
+				div
+					div.slider-content-div(style="background-image: url('/images/andreas-staier.jpg')")
 
-    div.col-xs-12.main-block
-      div.container#composer-div-container
-        div#composer-div-content
-          h2 Johann Sebastian Bach
-          p: strong (1685-1750)
-          p German Composer
-          p Johann Sebastian Bach was a German composer and musician of the Baroque period. He enriched established German styles through his skill in counterpoint, harmonic and motivic organisation, and the adaptation of rhythms, forms, and textures from abroad, particularly from Italy and France. His music is revered for its technical command, artistic beauty, and intellectual depth.
+		div.col-xs-12.main-block
+			div.container#composer-div-container
+				div#composer-div-content
+					h2 Johann Sebastian Bach
+					p: strong (1685-1750)
+					p German Composer
+					p Johann Sebastian Bach was a German composer and musician of the Baroque period. He enriched established German styles through his skill in counterpoint, harmonic and motivic organisation, and the adaptation of rhythms, forms, and textures from abroad, particularly from Italy and France. His music is revered for its technical command, artistic beauty, and intellectual depth.
 
 
 block scripts
-  script(src='/slick/slick.min.js')
-  script(type="text/javascript" src='/javascripts/interpretation.js')
+	script(src='/slick/slick.min.js')
+	script(type="text/javascript" src='/javascripts/interpretation.js')
