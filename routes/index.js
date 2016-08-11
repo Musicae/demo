@@ -29,20 +29,20 @@ var goldbergContent = [
 			{
 				'performer': 'Murray Perahia',
 				'date': 2000,
-				'keywords': ['Unique', 'Slow', 'Graceful'],
+				'keywords': ['Colourful', 'Moving', 'Intellect'],
 				'upvotesCount': 200,
 				'commentsCount': 8,
 				'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A2ecywJZyq9FeZWhKUT0kIq',
 				'imageUrl': '/images/murray-perahia.jpg'
 			},
 			{
-				'performer': 'Glenn Gould',
-				'date': 1955,
-				'keywords': ['Unique', 'Slow', 'Graceful'],
+				'performer': 'András Schiff',
+				'date': 1982,
+				'keywords': ['Clarity', 'Sensitive', 'Colourful'],
 				'upvotesCount': 124,
 				'commentsCount': 6,
-				'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A0ogm04LcccovebvmP9Mo6W',
-				'imageUrl': '/images/glenn-gould-1955.jpg'
+				'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A6BPySwMHalhWlXn7fsSXqE',
+				'imageUrl': '/images/andras-schiff.jpg'
 			},
 		]
 	},
@@ -96,13 +96,36 @@ var goldbergContent = [
 			},
 		]
 	},
+  {
+    'blockName': '21th Century Versions',
+    'blockVersions': [
+      {
+        'performer': 'Glenn Gould',
+        'date': 1955,
+        'keywords': ['Clarity', 'Well-designed', 'Fast'],
+        'upvotesCount': 124,
+        'commentsCount': 6,
+        'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A0ogm04LcccovebvmP9Mo6W',
+        'imageUrl': '/images/glenn-gould-1955.jpg'
+      },
+      {
+        'performer': 'Rosalyn Tureck',
+        'date': 1999,
+        'keywords': ['Gravitas', 'Wisdom', 'Slow'],
+        'upvotesCount': 50,
+        'commentsCount': 2,
+        'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A5lAeMqoabWaBNFfEsCJJmJ',
+        'imageUrl': '/images/rosalyn-tureck.jpg'
+      },
+    ]
+  },
 	{
 		'blockName': 'Harpsichord Versions',
 		'blockVersions': [
 			{
 				'performer': 'Andreas Staier',
 				'date': 2015,
-				'keywords': ['Unique', 'Slow', 'Graceful'],
+				'keywords': ['Love', 'Subtle', 'Articulated'],
 				'upvotesCount': 300,
 				'commentsCount': 10,
 				'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A3I7yCh1xt7hDlkT8FnXmNI',
@@ -111,7 +134,7 @@ var goldbergContent = [
 			{
 				'performer': 'Luc Beauséjour',
 				'date': 2006,
-				'keywords': ['Unique', 'Slow', 'Graceful'],
+				'keywords': ['Intellect', 'Spiritual', 'Dynamic'],
 				'upvotesCount': 300,
 				'commentsCount': 10,
 				'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A3t8weMtWRWnjVaa8w5dcDp',
@@ -125,7 +148,7 @@ var goldbergContent = [
 			{
 				'performer': 'Hansjörg Albrecht',
 				'date': 2008,
-				'keywords': ['Unique', 'Slow', 'Graceful'],
+				'keywords': ['Fluid', 'Peaceful', 'Precise'],
 				'upvotesCount': 300,
 				'commentsCount': 10,
 				'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A1rC4ov7GO6ceA63T2DKQOJ',
@@ -153,7 +176,7 @@ var goldbergContent = [
 			{
 				'performer': 'Jacques Loussier Trio',
 				'date': 2000,
-				'keywords': ['Unique', 'Slow', 'Graceful'],
+				'keywords': ['Swing', 'Inspired', 'Jazzy'],
 				'upvotesCount': 300,
 				'commentsCount': 10,
 				'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A7eRBMRU1WFFDul4ryLyH0K',
