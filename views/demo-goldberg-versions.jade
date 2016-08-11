@@ -32,6 +32,9 @@ block content
 											i.fa.fa-play-circle(aria-hidden="true")#play-black
 										else
 											i.fa.fa-play-circle(aria-hidden="true")
+									div.credit
+										if version.credit
+											p: em Credit: !{version.credit}
 									div.comment-div
 										a(href="#").votes
 											i.fa.fa-sort-asc(aria-hidden="true")
@@ -42,7 +45,7 @@ block content
 												each keyword, index in version.keywords
 													| #{keyword}
 													if index < version.keywords.length - 1
-														|, 
+														| ,&nbsp;
 										a(href="#").comments
 											div.commenticon
 												i.fa.fa-comment-o(aria-hidden="true")#commentcolor

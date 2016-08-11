@@ -23,13 +23,14 @@ var goldbergContent = [
 				'upvotesCount': 300,
 				'commentsCount': 10,
 				'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A1aCpHSQE5ghxibsQ5gkBe0',
-				'imageUrl': '/images/glenn-gould-1981.jpg',
-				'blackPlayer': true
+				'imageUrl': '/images/glenn-gould-old.jpg',
+        'credit': '<a href="https://www.flickr.com/photos/music2020/10735249225/in/album-72157637397776465/">Flickr</a>',
+				// 'blackPlayer': true
 			},
 			{
 				'performer': 'Murray Perahia',
 				'date': 2000,
-				'keywords': ['Colourful', 'Moving', 'Intellect'],
+				'keywords': ['Colourful', 'Moving' , 'Intellect'],
 				'upvotesCount': 200,
 				'commentsCount': 8,
 				'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A2ecywJZyq9FeZWhKUT0kIq',
@@ -47,57 +48,80 @@ var goldbergContent = [
 		]
 	},
 	{
-		'blockName': 'New Versions',
+		'blockName': 'Last Release',
 		'blockVersions': [
 			{
 				'performer': 'Alexandre Tharaud',
 				'date': 2015,
-				'keywords': ['Unique', 'Slow', 'Graceful'],
+				'keywords': ['Unique', 'Slow' , 'Graceful'],
 				'upvotesCount': 300,
 				'commentsCount': 10,
 				'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A6pyy2WoFZvmohjwHOzLzkt',
 				'imageUrl': '/images/alexandre-tharaud.jpg'
 			},
-			{
-				'performer': 'Nicholas Angelich',
-				'date': 2011,
-				'keywords': ['Unique', 'Slow', 'Graceful'],
-				'upvotesCount': 300,
-				'commentsCount': 10,
-				'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A3zKmTIFDNOwBgHUEj5zbfV',
-				'imageUrl': '/images/Nicholas-Angelich.jpg'
-			},
-			{
-				'performer': 'Avner Arad',
-				'date': 2011,
-				'keywords': ['Unique', 'Slow', 'Graceful'],
-				'upvotesCount': 300,
-				'commentsCount': 10,
-				'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A5LPqAhrJeLJJTOusuCGoIL',
-				'imageUrl': '/images/Arad-Avner.jpg'
-			},
-			{
-				'performer': 'Andrea Bacchetti',
-				'date': 2006,
-				'keywords': ['Unique', 'Slow', 'Graceful'],
-				'upvotesCount': 300,
-				'commentsCount': 10,
-				'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A4MRbZKtQP0hoILkG8EazrV',
-				'imageUrl': '/images/Bacchetti-Andrea.jpg'
-			},
-			{
-				'performer': 'Tzimon Barto',
-				'date': 2015,
-				'keywords': ['Unique', 'Slow', 'Graceful'],
-				'upvotesCount': 300,
-				'commentsCount': 10,
-				'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A5yXrtDqKN3VOFQOpd7maFY',
-				'imageUrl': '/images/Tzimon-Barto.jpg'
-			},
+      {
+        'performer': 'Tzimon Barto',
+        'date': 2015,
+        'keywords': ['Unique', 'Slow', 'Graceful'],
+        'upvotesCount': 300,
+        'commentsCount': 10,
+        'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A5yXrtDqKN3VOFQOpd7maFY',
+        'imageUrl': '/images/Tzimon-Barto.jpg'
+      },
+      {
+        'performer': 'Lars Vogt',
+        'date': 2015,
+        'keywords': ['Fresh', 'Elegant', 'Melodious'],
+        'upvotesCount': 48,
+        'commentsCount': 5,
+        'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A5NvZnucaU1LyULxVNy7L9c',
+        'imageUrl': '/images/lars-vogt.jpg'
+      },
 		]
 	},
   {
-    'blockName': '21th Century Versions',
+    'blockName': 'Recent Versions',
+    'blockVersions': [
+      {
+        'performer': 'Nicholas Angelich',
+        'date': 2011,
+        'keywords': ['Unique', 'Slow', 'Graceful'],
+        'upvotesCount': 300,
+        'commentsCount': 10,
+        'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A3zKmTIFDNOwBgHUEj5zbfV',
+        'imageUrl': '/images/Nicholas-Angelich.jpg'
+      },
+      {
+        'performer': 'Avner Arad',
+        'date': 2011,
+        'keywords': ['Unique', 'Slow', 'Graceful'],
+        'upvotesCount': 300,
+        'commentsCount': 10,
+        'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A5LPqAhrJeLJJTOusuCGoIL',
+        'imageUrl': '/images/Arad-Avner.jpg'
+      },
+      {
+        'performer': 'Nick Van Bloss',
+        'date': 2011,
+        'keywords': ['Unique', 'Slow', 'Graceful'],
+        'upvotesCount': 300,
+        'commentsCount': 10,
+        'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A5yXrtDqKN3VOFQOpd7maFY',
+        'imageUrl': '/images/Tzimon-Barto.jpg'
+      },
+      {
+        'performer': 'Andrea Bacchetti',
+        'date': 2006,
+        'keywords': ['Unique', 'Slow', 'Graceful'],
+        'upvotesCount': 300,
+        'commentsCount': 10,
+        'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A4MRbZKtQP0hoILkG8EazrV',
+        'imageUrl': '/images/Bacchetti-Andrea.jpg'
+      },
+    ]
+  },
+  {
+    'blockName': '20th Century Versions',
     'blockVersions': [
       {
         'performer': 'Glenn Gould',
@@ -106,7 +130,8 @@ var goldbergContent = [
         'upvotesCount': 124,
         'commentsCount': 6,
         'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A0ogm04LcccovebvmP9Mo6W',
-        'imageUrl': '/images/glenn-gould-1955.jpg'
+        'imageUrl': '/images/glenn-gould-young.jpg',
+        'credit': '<a href="https://www.flickr.com/photos/music2020/10720886043/in/photolist-hkoU7c-hDm6zm-hkmuPN-hknkUP-hDmiNw-hkw1zw-hk9KQx-hkwPWH-hkw4B3-hknN5L-hkwPU8-hkxpNk-hkvYYU-hkvmv4-hkxpGP-hknjTT-hDkpzT-hDm4Be-hDm6wW-hDmKa1">Flickr</a>'
       },
       {
         'performer': 'Rosalyn Tureck',
@@ -140,6 +165,15 @@ var goldbergContent = [
 				'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A3t8weMtWRWnjVaa8w5dcDp',
 				'imageUrl': '/images/Luc-Beausejour.jpg'
 			},
+      {
+        'performer': 'Jory Vinikour',
+        'date': 2000,
+        'keywords': ['Intellect', 'Spiritual', 'Dynamic'],
+        'upvotesCount': 100,
+        'commentsCount': 18,
+        'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A5kDuY9TYzWmrXQCvsjsYFQ',
+        'imageUrl': '/images/harpsichord.jpg'
+      },
 		]
 	},
 	{
@@ -168,6 +202,24 @@ var goldbergContent = [
 				'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A31OTA4TyMwip3HrBmMRLSn',
 				'imageUrl': '/images/Trio-Lucerne.jpg'
 			},
+      {
+        'performer': 'Trio ZilliacusPerssonRaitinen',
+        'date': 2012,
+        'keywords': ['Light', 'Fresh', 'Daring'],
+        'upvotesCount': 147,
+        'commentsCount': 16,
+        'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A05vPpbPWT43NWwCYKAMq6y',
+        'imageUrl': '/images/string-trio.jpg'
+      },
+      {
+        'performer': 'Swiss Chamber Soloists',
+        'date': 2008,
+        'keywords': ['Suppleness', 'Intuitive', 'Lyrical'],
+        'upvotesCount': 98,
+        'commentsCount': 2,
+        'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A7GpGvKP1fGCpkFqtgY1QBU',
+        'imageUrl': '/images/string-trio.jpg'
+      },
 		]
 	},
 	{
