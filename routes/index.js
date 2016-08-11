@@ -30,7 +30,7 @@ var goldbergContent = [
 			{
 				'performer': 'Murray Perahia',
 				'date': 2000,
-				'keywords': ['Colourful', 'Moving' , 'Intellect'],
+				'keywords': ['Moving', 'Intellectual' , 'Evident'],
 				'upvotesCount': 200,
 				'commentsCount': 8,
 				'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A2ecywJZyq9FeZWhKUT0kIq',
@@ -39,7 +39,7 @@ var goldbergContent = [
 			{
 				'performer': 'András Schiff',
 				'date': 1982,
-				'keywords': ['Clarity', 'Sensitive', 'Colourful'],
+				'keywords': ['Clear', 'Sensitive', 'Colourful'],
 				'upvotesCount': 124,
 				'commentsCount': 6,
 				'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A6BPySwMHalhWlXn7fsSXqE',
@@ -53,18 +53,20 @@ var goldbergContent = [
 			{
 				'performer': 'Alexandre Tharaud',
 				'date': 2015,
-				'keywords': ['Unique', 'Slow' , 'Graceful'],
+				'keywords': ['Delicate', 'Vivid' , 'Evident'],
 				'upvotesCount': 300,
 				'commentsCount': 10,
 				'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A6pyy2WoFZvmohjwHOzLzkt',
-				'imageUrl': '/images/alexandre-tharaud.jpg'
+				'imageUrl': '/images/alexandre-tharaud.jpg',
+        'credit': '<a href="https://www.flickr.com/photos/rotterdamsphilharmonischorkest/6142932021">Flickr</a>'
+
 			},
       {
         'performer': 'Tzimon Barto',
         'date': 2015,
-        'keywords': ['Unique', 'Slow', 'Graceful'],
-        'upvotesCount': 300,
-        'commentsCount': 10,
+        'keywords': ['Gothic', 'Romanticised', 'Sentimental'],
+        'upvotesCount': 140,
+        'commentsCount': 2,
         'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A5yXrtDqKN3VOFQOpd7maFY',
         'imageUrl': '/images/Tzimon-Barto.jpg'
       },
@@ -85,16 +87,16 @@ var goldbergContent = [
       {
         'performer': 'Nicholas Angelich',
         'date': 2011,
-        'keywords': ['Unique', 'Slow', 'Graceful'],
+        'keywords': ['Clear', 'Suave', 'Animated'],
         'upvotesCount': 300,
         'commentsCount': 10,
         'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A3zKmTIFDNOwBgHUEj5zbfV',
-        'imageUrl': '/images/Nicholas-Angelich.jpg'
+        'imageUrl': '/images/nicholas-angelich.jpg'
       },
       {
         'performer': 'Avner Arad',
         'date': 2011,
-        'keywords': ['Unique', 'Slow', 'Graceful'],
+        'keywords': ['Staggering', 'Athletic', 'Virtuoso'],
         'upvotesCount': 300,
         'commentsCount': 10,
         'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A5LPqAhrJeLJJTOusuCGoIL',
@@ -103,11 +105,11 @@ var goldbergContent = [
       {
         'performer': 'Nick Van Bloss',
         'date': 2011,
-        'keywords': ['Unique', 'Slow', 'Graceful'],
+        'keywords': ['Fluid', 'Clear', 'Lyrical'],
         'upvotesCount': 300,
         'commentsCount': 10,
         'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A5yXrtDqKN3VOFQOpd7maFY',
-        'imageUrl': '/images/Tzimon-Barto.jpg'
+        'imageUrl': '/images/nick-van-bloss.jpg'
       },
       {
         'performer': 'Andrea Bacchetti',
@@ -126,7 +128,7 @@ var goldbergContent = [
       {
         'performer': 'Glenn Gould',
         'date': 1955,
-        'keywords': ['Clarity', 'Well-designed', 'Fast'],
+        'keywords': ['Articulated', 'Designed', 'Fast'],
         'upvotesCount': 124,
         'commentsCount': 6,
         'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A0ogm04LcccovebvmP9Mo6W',
@@ -168,7 +170,7 @@ var goldbergContent = [
       {
         'performer': 'Jory Vinikour',
         'date': 2000,
-        'keywords': ['Intellect', 'Spiritual', 'Dynamic'],
+        'keywords': ['Rich', 'Subtle', 'Tender'],
         'upvotesCount': 100,
         'commentsCount': 18,
         'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A5kDuY9TYzWmrXQCvsjsYFQ',
@@ -196,7 +198,7 @@ var goldbergContent = [
 			{
 				'performer': 'Goldberg Trio Lucerne',
 				'date': 2011,
-				'keywords': ['Unique', 'Slow', 'Graceful'],
+				'keywords': ['Detailed', 'Slow', 'Faithful'],
 				'upvotesCount': 300,
 				'commentsCount': 10,
 				'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A31OTA4TyMwip3HrBmMRLSn',
