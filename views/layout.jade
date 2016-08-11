@@ -1,231 +1,229 @@
 doctype html
 html
-  head
-    title= title
-    meta(charset="UTF-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1")
-    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous")
-    block stylesheets
-      link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    nav.navbar
-      div.navbar-header
-        button.navbar-toggle.collapsed(type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false")
-          span.sr-only Toggle navigation
-          span.icon-bar
-          span.icon-bar
-          span.icon-bar
-        a.navbar-brand(href="#")
-          img(src="/images/Musicae_Black.png" alt="Musicae Logo" style="max-height: 100%; padding: 5px;")
-      div.collapse.navbar-collapse(id="bs-example-navbar-collapse-1")
-        ul.nav.navbar-nav
-          li.dropdown
-            a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Composers
-            ul.dropdown-menu.multi-column.columns-3
-              div.row
-                div.col-sm-4.multi-column-dropdown
-                  ul
-                    li: a(href="#"): strong View All Composers
-                    li: a: strong Featured:
-                    li: a(href="#") Bach, Johann Sebastian
-                    li: a(href="#") Beethoven, Ludwig van
-                    li: a(href="#") Berlioz, Hector
-                    li: a(href="#") Bizet, Georges
-                    li: a(href="#") Brahms, Johannes
-                    li: a(href="#") Chopin, Frédéric
-                    li: a(href="#") Debussy, Claude
-                    li: a(href="#") Dvorák, Antonín
-                    li: a(href="#") Fauré, Gabriel
-                div.col-sm-4.multi-column-dropdown
-                  ul
-                    li: a &nbsp;
-                    li: a &nbsp;
-                    li: a(href="#") Handel, George Frideric
-                    li: a(href="#") Haydn, Franz Joseph
-                    li: a(href="#") Liszt, Franz
-                    li: a(href="#") Mahler, Gustav
-                    li: a(href="#") Mendelssohn, Felix
-                    li: a(href="#") Mozart, Wolfgang Amadeus
-                    li: a(href="#") Prokofiev, Sergei
-                    li: a(href="#") Rachmaninov, Sergei
-                    li: a(href="#") Ravel, Maurice
-                div.col-sm-4.multi-column-dropdown
-                  ul
-                    li: input.form-control.column-search(type=text placeholder="Search")
-                    li: a &nbsp;
-                    li: a(href="#") Rossini, Gioachino
-                    li: a(href="#") Schubert, Franz
-                    li: a(href="#") Schumann, Robert
-                    li: a(href="#") Shostakovich, Dmitri
-                    li: a(href="#") Strauss, Richard
-                    li: a(href="#") Stravinsky, Igor
-                    li: a(href="#") Tchaikovsky, Peter Ilyich
-                    li: a(href="#") Vivaldi, Antonio
-                    li: a(href="#") Wagner, Richard
-          li.dropdown
-            a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Conductors
-            ul.dropdown-menu.multi-column.columns-3
-              div.row
-                div.col-sm-4.multi-column-dropdown
-                  ul
-                    li: a(href="#"): strong View All Conductors
-                    li: a: strong Featured:
-                    li: a(href="#") Abbado, Claudio
-                    li: a(href="#") Bernstein, Leonard
-                    li: a(href="#") Boulez, Pierre
-                    li: a(href="#") Boult, Sir Adrian
-                    li: a(href="#") Böhm, Karl
-                    li: a(href="#") Davis, Sir Colin
-                    li: a(href="#") Dudamel, Gustavo
-                    li: a(href="#") Dutoit, Charles
-                    li: a(href="#") Fiedler, Arthur
-                div.col-sm-4.multi-column-dropdown
-                  ul
-                    li: a &nbsp;
-                    li: a &nbsp;
-                    li: a(href="#") Furtwängler, Wilhelm
-                    li: a(href="#") Gardiner, John Eliot
-                    li: a(href="#") Gergiev, Valery
-                    li: a(href="#") Guerrero, Giancarlo
-                    li: a(href="#") Harnoncourt, Nikolaus
-                    li: a(href="#") Hogwood, Christopher
-                    li: a(href="#") Järvi, Neeme
-                    li: a(href="#") Karajan, Herbert von
-                    li: a(href="#") Klemperer, Otto
-                div.col-sm-4.multi-column-dropdown
-                  ul
-                    li: input.form-control.column-search(type=text placeholder="Search")
-                    li: a &nbsp;
-                    li: a(href="#") Levine, James
-                    li: a(href="#") Ormandy, Eugene
-                    li: a(href="#") Rattle, Simon
-                    li: a(href="#") Reiner, Fritz
-                    li: a(href="#") Solti, Sir Georg
-                    li: a(href="#") Szell, George
-                    li: a(href="#") Thomas, Michael Tilson
-                    li: a(href="#") Toscanini, Arturo
-                    li: a(href="#") Van Zweden, Jaap
-          li.dropdown
-            a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Performers
-            ul.dropdown-menu.multi-column.columns-3
-              div.row
-                div.col-sm-4.multi-column-dropdown
-                  ul
-                    li: a(href="#"): strong View All Performers
-                    li: a: strong Featured:
-                    li: a(href="#") André, Maurice
-                    li: a(href="#") Argerich, Martha
-                    li: a(href="#") Ashkenazy, Vladimir
-                    li: a(href="#") Barenboim, Daniel
-                    li: a(href="#") Bartoli, Cecilia
-                    li: a(href="#") Bell, Joshua
-                    li: a(href="#") Callas, Maria
-                    li: a(href="#") Casals, Pablo
-                    li: a(href="#") Domingo, Placido
-                div.col-sm-4.multi-column-dropdown
-                  ul
-                    li: a &nbsp;
-                    li: a &nbsp;
-                    li: a(href="#") Du Pré, Jacqueline
-                    li: a(href="#") Fleming, Renée
-                    li: a(href="#") Giltburg, Boris
-                    li: a(href="#") Gould, Glenn
-                    li: a(href="#") Horowitz, Vladimir
-                    li: a(href="#") Lang, Lang
-                    li: a(href="#") Ma, Yo-Yo
-                    li: a(href="#") Mutter, Anne-Sophie
-                    li: a(href="#") Netrebko, Anna
-                div.col-sm-4.multi-column-dropdown
-                  ul
-                    li: input.form-control.column-search(type=text placeholder="Search")
-                    li: a &nbsp;
-                    li: a(href="#") Pavarotti, Luciano
-                    li: a(href="#") Perahia, Murray
-                    li: a(href="#") Pollini, Maurizio
-                    li: a(href="#") Rampal, Jean-Pierre
-                    li: a(href="#") Richter, Sviatoslav
-                    li: a(href="#") Rostropovich, Mstislav
-                    li: a(href="#") Rubinstein, Artur
-                    li: a(href="#") Segovia, Andrés
-                    li: a(href="#") Uchida, Mitsuko
+	head
+		title= title
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous")
+		link(href='https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700' rel='stylesheet' type='text/css')
+		block stylesheets
+			link(rel='stylesheet', href='/stylesheets/style.css')
+	body
+		nav.navbar#main-menu
+			div.navbar-header
+				button.navbar-toggle.collapsed(type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false")
+					span.sr-only Toggle navigation
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+				a.navbar-brand(href="#")
+					img(src="/images/Musicae_Black.png" alt="Musicae Logo")
+			div.collapse.navbar-collapse(id="bs-example-navbar-collapse-1")
+				ul.nav.navbar-nav
+					li.dropdown
+						a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Composers
+						ul.dropdown-menu.multi-column.columns-3
+							div.row
+								div.col-sm-4.multi-column-dropdown
+									ul
+										li: a(href="#"): strong View All Composers
+										li: a: strong Featured:
+										li: a(href="#") Bach, Johann Sebastian
+										li: a(href="#") Beethoven, Ludwig van
+										li: a(href="#") Berlioz, Hector
+										li: a(href="#") Bizet, Georges
+										li: a(href="#") Brahms, Johannes
+										li: a(href="#") Chopin, Frédéric
+										li: a(href="#") Debussy, Claude
+										li: a(href="#") Dvorák, Antonín
+										li: a(href="#") Fauré, Gabriel
+								div.col-sm-4.multi-column-dropdown
+									ul
+										li: a &nbsp;
+										li: a &nbsp;
+										li: a(href="#") Handel, George Frideric
+										li: a(href="#") Haydn, Franz Joseph
+										li: a(href="#") Liszt, Franz
+										li: a(href="#") Mahler, Gustav
+										li: a(href="#") Mendelssohn, Felix
+										li: a(href="#") Mozart, Wolfgang Amadeus
+										li: a(href="#") Prokofiev, Sergei
+										li: a(href="#") Rachmaninov, Sergei
+										li: a(href="#") Ravel, Maurice
+								div.col-sm-4.multi-column-dropdown
+									ul
+										li: input.form-control.column-search(type=text placeholder="Search")
+										li: a &nbsp;
+										li: a(href="#") Rossini, Gioachino
+										li: a(href="#") Schubert, Franz
+										li: a(href="#") Schumann, Robert
+										li: a(href="#") Shostakovich, Dmitri
+										li: a(href="#") Strauss, Richard
+										li: a(href="#") Stravinsky, Igor
+										li: a(href="#") Tchaikovsky, Peter Ilyich
+										li: a(href="#") Vivaldi, Antonio
+										li: a(href="#") Wagner, Richard
+					li.dropdown
+						a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Conductors
+						ul.dropdown-menu.multi-column.columns-3
+							div.row
+								div.col-sm-4.multi-column-dropdown
+									ul
+										li: a(href="#"): strong View All Conductors
+										li: a: strong Featured:
+										li: a(href="#") Abbado, Claudio
+										li: a(href="#") Bernstein, Leonard
+										li: a(href="#") Boulez, Pierre
+										li: a(href="#") Boult, Sir Adrian
+										li: a(href="#") Böhm, Karl
+										li: a(href="#") Davis, Sir Colin
+										li: a(href="#") Dudamel, Gustavo
+										li: a(href="#") Dutoit, Charles
+										li: a(href="#") Fiedler, Arthur
+								div.col-sm-4.multi-column-dropdown
+									ul
+										li: a &nbsp;
+										li: a &nbsp;
+										li: a(href="#") Furtwängler, Wilhelm
+										li: a(href="#") Gardiner, John Eliot
+										li: a(href="#") Gergiev, Valery
+										li: a(href="#") Guerrero, Giancarlo
+										li: a(href="#") Harnoncourt, Nikolaus
+										li: a(href="#") Hogwood, Christopher
+										li: a(href="#") Järvi, Neeme
+										li: a(href="#") Karajan, Herbert von
+										li: a(href="#") Klemperer, Otto
+								div.col-sm-4.multi-column-dropdown
+									ul
+										li: input.form-control.column-search(type=text placeholder="Search")
+										li: a &nbsp;
+										li: a(href="#") Levine, James
+										li: a(href="#") Ormandy, Eugene
+										li: a(href="#") Rattle, Simon
+										li: a(href="#") Reiner, Fritz
+										li: a(href="#") Solti, Sir Georg
+										li: a(href="#") Szell, George
+										li: a(href="#") Thomas, Michael Tilson
+										li: a(href="#") Toscanini, Arturo
+										li: a(href="#") Van Zweden, Jaap
+					li.dropdown
+						a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Performers
+						ul.dropdown-menu.multi-column.columns-3
+							div.row
+								div.col-sm-4.multi-column-dropdown
+									ul
+										li: a(href="#"): strong View All Performers
+										li: a: strong Featured:
+										li: a(href="#") André, Maurice
+										li: a(href="#") Argerich, Martha
+										li: a(href="#") Ashkenazy, Vladimir
+										li: a(href="#") Barenboim, Daniel
+										li: a(href="#") Bartoli, Cecilia
+										li: a(href="#") Bell, Joshua
+										li: a(href="#") Callas, Maria
+										li: a(href="#") Casals, Pablo
+										li: a(href="#") Domingo, Placido
+								div.col-sm-4.multi-column-dropdown
+									ul
+										li: a &nbsp;
+										li: a &nbsp;
+										li: a(href="#") Du Pré, Jacqueline
+										li: a(href="#") Fleming, Renée
+										li: a(href="#") Giltburg, Boris
+										li: a(href="#") Gould, Glenn
+										li: a(href="#") Horowitz, Vladimir
+										li: a(href="#") Lang, Lang
+										li: a(href="#") Ma, Yo-Yo
+										li: a(href="#") Mutter, Anne-Sophie
+										li: a(href="#") Netrebko, Anna
+								div.col-sm-4.multi-column-dropdown
+									ul
+										li: input.form-control.column-search(type=text placeholder="Search")
+										li: a &nbsp;
+										li: a(href="#") Pavarotti, Luciano
+										li: a(href="#") Perahia, Murray
+										li: a(href="#") Pollini, Maurizio
+										li: a(href="#") Rampal, Jean-Pierre
+										li: a(href="#") Richter, Sviatoslav
+										li: a(href="#") Rostropovich, Mstislav
+										li: a(href="#") Rubinstein, Artur
+										li: a(href="#") Segovia, Andrés
+										li: a(href="#") Uchida, Mitsuko
 
-          li.dropdown
-            a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Ensembles
-            ul.dropdown-menu.multi-column.columns-3
-              div.row
-                div.col-sm-4.multi-column-dropdown
-                  ul
-                    li: a(href="#"): strong View All Ensembles
-                    li: a(href="#"): strong Featured:
-                    li: a(href="#") Academy of St. Martin in the Fields
-                    li: a(href="#") Baltimore Symphony Orchestra
-                    li: a(href="#") Berlin Philharmonic Orchestra
-                    li: a(href="#") Boston Symphony Orchestra
-                    li: a(href="#") Buffalo Philharmonic Orchestra
-                    li: a(href="#") Canadian Brass
-                    li: a(href="#") Chanticleer
-                    li: a(href="#") Chicago Symphony Orchestra
-                    li: a(href="#") Cleveland Orchestra
-                div.col-sm-4.multi-column-dropdown
-                  ul
-                    li: a &nbsp;
-                    li: a &nbsp;
-                    li: a(href="#") Detroit Symphony Orchestra
-                    li: a(href="#") Emerson String Quartet
-                    li: a(href="#") English Chamber Orchestra
-                    li: a(href="#") Juilliard String Quartet
-                    li: a(href="#") King's College Choir, Cambridge
-                    li: a(href="#") London Symphony Orchestra
-                    li: a(href="#") Los Angeles Philharmonic Orchestra
-                    li: a(href="#") Montreal Symphony Orchestra
-                    li: a(href="#") Nashville Symphony Orchestra
-                div.col-sm-4.multi-column-dropdown
-                  ul
-                    li: input.form-control.column-search(type=text placeholder="Search")
-                    li: a &nbsp;
-                    li: a(href="#") New York Philharmonic
-                    li: a(href="#") Orpheus Chamber Orchestra
-                    li: a(href="#") Philadelphia Orchestra
-                    li: a(href="#") Philharmonia Orchestra
-                    li: a(href="#") San Francisco Symphony Orchestra
-                    li: a(href="#") Seattle Symphony Orchestra
-                    li: a(href="#") Tallis Scholars
-                    li: a(href="#") Tokyo String Quartet
-                    li: a(href="#") Vienna Philharmonic Orchestra
-          li.dropdown
-            a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Genres
-            ul.dropdown-menu
-              li: a(href="#") Chamber Music
-              li: a(href="#") Choral
-              li: a(href="#") Concerto
-              li: a(href="#") Opera
-              li: a(href="#") Orchestral Works
-              li: a(href="#") Piano Music
-              li: a(href="#") Sacred Work
-              li: a(href="#") Songs
-              li: a(href="#") Symphony
-          li.dropdown
-            a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Eras
-            ul.dropdown-menu
-              li: a(href="#") Early and Medieval
-              li: a(href="#") Renaissance
-              li: a(href="#") Baroque
-              li: a(href="#") Classical
-              li: a(href="#") Romantic
-              li: a(href="#") Modern
-              li: a(href="#") Contemporary
-        div.navbar-right#sign-in-div
-          ul.nav.navbar-nav
-            li: a(href="#") Sign in / Register
-        div.navbar-right
-          ul.nav.navbar-nav(style="padding-right: 0;")
-            li: a(href="#")
-              span.glyphicon.glyphicon-search(aria-hidden="true")
-        // form.navbar-form.navbar-right
-        //   div.form-group
-        //     input.form-control(type="text" placeholder="Search")
-    div(style="width:100%; height: 50px; clear: both;")
-    block content
-    script(src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous")
-    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
-    block scripts
+					li.dropdown
+						a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Ensembles
+						ul.dropdown-menu.multi-column.columns-3
+							div.row
+								div.col-sm-4.multi-column-dropdown
+									ul
+										li: a(href="#"): strong View All Ensembles
+										li: a(href="#"): strong Featured:
+										li: a(href="#") Academy of St. Martin in the Fields
+										li: a(href="#") Baltimore Symphony Orchestra
+										li: a(href="#") Berlin Philharmonic Orchestra
+										li: a(href="#") Boston Symphony Orchestra
+										li: a(href="#") Buffalo Philharmonic Orchestra
+										li: a(href="#") Canadian Brass
+										li: a(href="#") Chanticleer
+										li: a(href="#") Chicago Symphony Orchestra
+										li: a(href="#") Cleveland Orchestra
+								div.col-sm-4.multi-column-dropdown
+									ul
+										li: a &nbsp;
+										li: a &nbsp;
+										li: a(href="#") Detroit Symphony Orchestra
+										li: a(href="#") Emerson String Quartet
+										li: a(href="#") English Chamber Orchestra
+										li: a(href="#") Juilliard String Quartet
+										li: a(href="#") King's College Choir, Cambridge
+										li: a(href="#") London Symphony Orchestra
+										li: a(href="#") Los Angeles Philharmonic Orchestra
+										li: a(href="#") Montreal Symphony Orchestra
+										li: a(href="#") Nashville Symphony Orchestra
+								div.col-sm-4.multi-column-dropdown
+									ul
+										li: input.form-control.column-search(type=text placeholder="Search")
+										li: a &nbsp;
+										li: a(href="#") New York Philharmonic
+										li: a(href="#") Orpheus Chamber Orchestra
+										li: a(href="#") Philadelphia Orchestra
+										li: a(href="#") Philharmonia Orchestra
+										li: a(href="#") San Francisco Symphony Orchestra
+										li: a(href="#") Seattle Symphony Orchestra
+										li: a(href="#") Tallis Scholars
+										li: a(href="#") Tokyo String Quartet
+										li: a(href="#") Vienna Philharmonic Orchestra
+					li.dropdown
+						a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Genres
+						ul.dropdown-menu
+							li: a(href="#") Chamber Music
+							li: a(href="#") Choral
+							li: a(href="#") Concerto
+							li: a(href="#") Opera
+							li: a(href="#") Orchestral Works
+							li: a(href="#") Piano Music
+							li: a(href="#") Sacred Work
+							li: a(href="#") Songs
+							li: a(href="#") Symphony
+					li.dropdown
+						a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Eras
+						ul.dropdown-menu
+							li: a(href="#") Early and Medieval
+							li: a(href="#") Renaissance
+							li: a(href="#") Baroque
+							li: a(href="#") Classical
+							li: a(href="#") Romantic
+							li: a(href="#") Modern
+							li: a(href="#") Contemporary
+				div.navbar-right#sign-in-div
+					ul.nav.navbar-nav
+						li: a(href="#") Sign in / Register
+				div.navbar-right
+					ul.nav.navbar-nav(style="padding-right: 0;")
+						li: a(href="#")
+							span.glyphicon.glyphicon-search(aria-hidden="true")
+		div(style="width:100%; height: 50px; clear: both;")
+		block content
+		script(src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous")
+		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
+		block scripts
