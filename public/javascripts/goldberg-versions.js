@@ -34,4 +34,14 @@ $(document).ready(function() {
 	});
 
 	$('body').scrollspy({ target: '#sidebar', offset: 250 });
+
+	$('.show-more-button').click(function(e) {
+		e.preventDefault();
+		var group = '.hidden-group' + $(this).data('group');
+		var buttons = '.show-more' + $(this).data('group');
+		$(group).slideToggle("slow");
+		var html = $(this).html();
+		console.error(html);
+		$(buttons).html(html == '<i aria-hidden="true" class="fa fa-angle-up"></i>&nbsp;&nbsp;Hide' ? '<i aria-hidden="true" class="fa fa-angle-down"></i>&nbsp;&nbsp;Show more' : '<i aria-hidden="true" class="fa fa-angle-up"></i>&nbsp;&nbsp;Hide');
+	});
 });
