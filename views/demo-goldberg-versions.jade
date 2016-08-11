@@ -21,36 +21,72 @@ block content
 						div(id="versionGroup#{groupIndex}")
 					div.title-box
 						h4 #{group.blockName}
-					each version in group.blockVersions
-						div.content-box
-							div.col-xs-12.col-sm-4
-								div.info-box-content
-									div.perfomer-img-div(style='background-image:url("#{version.imageUrl}")')
-										div.player-iframe
-											iframe(src="#{version.spotifyIframe}" width="100%" height="380" frameborder="0" allowtransparency="true")
-										if version.blackPlayer
-											i.fa.fa-play-circle(aria-hidden="true")#play-black
-										else
-											i.fa.fa-play-circle(aria-hidden="true")
-									div.credit
-										if version.credit
-											p: em Credit: !{version.credit}
-									div.comment-div
-										a(href="#").votes
-											i.fa.fa-sort-asc(aria-hidden="true")
-											p= version.upvotesCount
-										div.details
-											p: strong #{version.performer}, #{version.date}
-											p
-												each keyword, index in version.keywords
-													| #{keyword}
-													if index < version.keywords.length - 1
-														| ,&nbsp;
-										a(href="#").comments
-											div.commenticon
-												i.fa.fa-comment-o(aria-hidden="true")#commentcolor
-											div.commentcounter
-												p= version.commentsCount
+					each version, versionIndex in group.blockVersions
+						if versionIndex < 3
+							div.content-box
+								div.col-xs-12.col-sm-4
+									div.info-box-content
+										div.perfomer-img-div(style='background-image:url("#{version.imageUrl}")')
+											div.player-iframe
+												iframe(src="#{version.spotifyIframe}" width="100%" height="380" frameborder="0" allowtransparency="true")
+											if version.blackPlayer
+												i.fa.fa-play-circle(aria-hidden="true")#play-black
+											else
+												i.fa.fa-play-circle(aria-hidden="true")
+										div.credit
+											if version.credit
+												p: em Credit: !{version.credit}
+										div.comment-div
+											a(href="#").votes
+												i.fa.fa-sort-asc(aria-hidden="true")
+												p= version.upvotesCount
+											div.details
+												p: strong #{version.performer}, #{version.date}
+												p
+													each keyword, index in version.keywords
+														| #{keyword}
+														if index < version.keywords.length - 1
+															| ,&nbsp;
+											a(href="#").comments
+												div.commenticon
+													i.fa.fa-comment-o(aria-hidden="true")#commentcolor
+												div.commentcounter
+													p= version.commentsCount
+						else if versionIndex >= 3
+							div.hidden-box.content-box(class="hidden-group#{groupIndex}")
+								div.col-xs-12.col-sm-4
+									div.info-box-content
+										div.perfomer-img-div(style='background-image:url("#{version.imageUrl}")')
+											div.player-iframe
+												iframe(src="#{version.spotifyIframe}" width="100%" height="380" frameborder="0" allowtransparency="true")
+											if version.blackPlayer
+												i.fa.fa-play-circle(aria-hidden="true")#play-black
+											else
+												i.fa.fa-play-circle(aria-hidden="true")
+										div.credit
+											if version.credit
+												p: em Credit: !{version.credit}
+										div.comment-div
+											a(href="#").votes
+												i.fa.fa-sort-asc(aria-hidden="true")
+												p= version.upvotesCount
+											div.details
+												p: strong #{version.performer}, #{version.date}
+												p
+													each keyword, index in version.keywords
+														| #{keyword}
+														if index < version.keywords.length - 1
+															| ,&nbsp;
+											a(href="#").comments
+												div.commenticon
+													i.fa.fa-comment-o(aria-hidden="true")#commentcolor
+												div.commentcounter
+													p= version.commentsCount
+					if group.blockVersions.length > 3
+						div.show-more-div
+							button(class="show-more-button btn btn-default show-more#{groupIndex}" type="button" data-group="#{groupIndex}")
+								i.fa.fa-angle-down(aria-hidden="true")
+								| &nbsp;&nbsp;Show more
 
 	//- SIDEBAR
 	div#sidebar-container(data-spy="affix").col-sm-2
@@ -64,8 +100,15 @@ block content
 					li.sidebar-nav
 						a.js-scrollTo.versioncategory(href="#versionGroup#{groupIndex}") #{group.blockName}
 						ul.sidebar-dropdown
-							each version in group.blockVersions
-								li: a #{version.performer}, #{version.date}
+							each version, versionIndex in group.blockVersions
+								if versionIndex < 3
+									li: p #{version.performer}, #{version.date}
+								else if versionIndex >= 3
+									li.hidden-box(class="hidden-group#{groupIndex}"): p #{version.performer}, #{version.date}
+							if group.blockVersions.length > 3
+								a(href="#" class="show-more-button show-more#{groupIndex}" data-group="#{groupIndex}")
+									i.fa.fa-angle-down(aria-hidden="true")
+									| &nbsp;&nbsp;Show more
 
 block scripts
 	script(type="text/javascript" src='/javascripts/main.js')
