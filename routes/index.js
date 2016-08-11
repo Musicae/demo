@@ -91,7 +91,7 @@ var goldbergContent = [
         'upvotesCount': 300,
         'commentsCount': 10,
         'spotifyIframe': 'https://embed.spotify.com/?uri=spotify%3Aalbum%3A3zKmTIFDNOwBgHUEj5zbfV',
-        'imageUrl': '/images/nicholas-angelich.jpg'
+        'imageUrl': '/images/Nicholas-Angelich.jpg'
       },
       {
         'performer': 'Avner Arad',
