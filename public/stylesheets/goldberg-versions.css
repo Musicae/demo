@@ -73,6 +73,20 @@ h4 {
 	width: 100%;
 }
 
+.credit {
+  height: 15px;
+}
+
+.credit > p {
+  line-height: 20px;
+  font-size: 10px;
+}
+
+.comment-div {
+  padding-top: 10px;
+  width: 100%;
+}
+
 .comment-div {
 	padding-top: 10px;
 	width: 100%;
