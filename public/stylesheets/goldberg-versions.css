@@ -10,7 +10,8 @@ h1 {
 }
 
 h4 {
-	color: #980008;
+	font-weight: 700;
+	/* color: #980008; */
 }
 
 /* PAGE CONTENT */
@@ -45,7 +46,9 @@ h4 {
 	margin: 20px 0px 20px 0px;
 	padding: 15px;
 	border-radius: 4px;
-	background-color: #ECEAE9;
+	/* background-color: #ECEAE9; */
+	background-color: white;
+	box-shadow: 1px 1px 3px #DFDFDF;
 }
 
 .perfomer-img-div {
@@ -195,7 +198,7 @@ h4 {
 }
 
 #sidebar .sidebar-nav.active > a {
-	color: #980008;
+	/* color: #980008; */
 	font-weight: 700;
 }
 
@@ -228,7 +231,7 @@ h4 {
 
 #sidebar a:hover {
 	text-decoration: none;
-	color: red;
+	color: #980008;
 }
 
 .scroll-anchor {
@@ -242,6 +245,7 @@ h4 {
 }
 
 .sidebar-dropdown > li > p {
-	color: #980008;
+	/* color: #980008; */
+	color: #424242;
 }
 
